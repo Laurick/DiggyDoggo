@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3nh6fjqdj6as"
-path="res://.godot/imported/HEROS1bit_Adventurer Idle U.png-1cb26020c53d8b1a1838e6d9a9ab8a16.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer Idle U.png-76623f7ad6f50dbeb8ec257094b1259b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer Idle U.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer Idle U.png-1cb26020c53d8b1a1838e6d9a9ab8a16.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer Idle U.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer Idle U.png-76623f7ad6f50dbeb8ec257094b1259b.ctex"]
 
 [params]
 

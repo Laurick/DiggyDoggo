@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpdfstya1bi31"
-path="res://.godot/imported/HEROS1bit_Adventurer Attack U.png-4e1f8c2ea73ab777605bc2bf6ae386cc.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer Attack U.png-168c52fb24f1b90062cade0e9f5da3f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer Attack U.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer Attack U.png-4e1f8c2ea73ab777605bc2bf6ae386cc.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer Attack U.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer Attack U.png-168c52fb24f1b90062cade0e9f5da3f9.ctex"]
 
 [params]
 

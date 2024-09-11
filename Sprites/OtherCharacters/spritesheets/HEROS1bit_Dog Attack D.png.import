@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd02pclxvrcdr"
-path="res://.godot/imported/HEROS1bit_Dog Attack D.png-04945e813cbbc6e682e8021fd96bce9e.ctex"
+path="res://.godot/imported/HEROS1bit_Dog Attack D.png-2f0eddaf138c3563b88506c9565a9ebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Dog Attack D.png"
-dest_files=["res://.godot/imported/HEROS1bit_Dog Attack D.png-04945e813cbbc6e682e8021fd96bce9e.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Attack D.png"
+dest_files=["res://.godot/imported/HEROS1bit_Dog Attack D.png-2f0eddaf138c3563b88506c9565a9ebb.ctex"]
 
 [params]
 

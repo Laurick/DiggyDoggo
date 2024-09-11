@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvjtqehiopha6"
-path="res://.godot/imported/HEROS1bit_Adventurer Death.png-068dded609af1a7ff31b42a242a4221e.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer Death.png-e0ca8a6beddafa5d190e007135667459.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer Death.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer Death.png-068dded609af1a7ff31b42a242a4221e.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer Death.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer Death.png-e0ca8a6beddafa5d190e007135667459.ctex"]
 
 [params]
 

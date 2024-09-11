@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyqtsipcgyexo"
-path="res://.godot/imported/HEROS1bit_Adventurer Walk D.png-e260ce4600b6b4fb45aa37d9f591b4eb.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer Walk D.png-ad6a89f64a01defbae3373f51122efec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer Walk D.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer Walk D.png-e260ce4600b6b4fb45aa37d9f591b4eb.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer Walk D.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer Walk D.png-ad6a89f64a01defbae3373f51122efec.ctex"]
 
 [params]
 

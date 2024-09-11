@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c5eq10777xnh0" path="res://Tileset/up-bed-f1.tres" id="16_3bmvt"]
 [ext_resource type="Texture2D" uid="uid://ca34ysrvfpiux" path="res://Tileset/up-bed-f2.tres" id="17_nai4m"]
 [ext_resource type="Texture2D" uid="uid://bgxcog6dau2nj" path="res://Sprites/Items/hole.png" id="18_p3f3q"]
-[ext_resource type="Script" path="res://Scripts/hole-controller.gd" id="19_3et2l"]
+[ext_resource type="Script" path="res://SCRIPTS/hole-controller.gd" id="19_3et2l"]
 [ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://Nodes/Pickables/pickable_shovel.tscn" id="20_rbr4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qadqn"]

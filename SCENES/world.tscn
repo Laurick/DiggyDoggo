@@ -1,26 +1,26 @@
 [gd_scene load_steps=49 format=3 uid="uid://c7mud6d2ljjvj"]
 
-[ext_resource type="Script" path="res://Scripts/game-manager.gd" id="1_4nufx"]
-[ext_resource type="PackedScene" uid="uid://de0pmnn81f0e" path="res://Scenes/player.tscn" id="2_fowwk"]
-[ext_resource type="Script" path="res://Scripts/camera.gd" id="3_4i2mk"]
-[ext_resource type="Script" path="res://Scripts/canvas-controller.gd" id="4_3wit5"]
-[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://Fonts/VT323-Regular.ttf" id="4_7g5vk"]
+[ext_resource type="Script" path="res://SCRIPTS/game-manager.gd" id="1_4nufx"]
+[ext_resource type="PackedScene" uid="uid://de0pmnn81f0e" path="res://SCENES/player.tscn" id="2_fowwk"]
+[ext_resource type="Script" path="res://SCRIPTS/camera.gd" id="3_4i2mk"]
+[ext_resource type="Script" path="res://SCRIPTS/canvas-controller.gd" id="4_3wit5"]
+[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://FONTS/VT323-Regular.ttf" id="4_7g5vk"]
 [ext_resource type="Shader" path="res://Shaders/crt.gdshader" id="4_y3sf8"]
-[ext_resource type="Texture2D" uid="uid://bu6wqmxaqbpea" path="res://Sprites/Items/sun.png" id="5_87rmp"]
-[ext_resource type="Texture2D" uid="uid://duoofrnk02de2" path="res://Sprites/Items/moon.png" id="6_fkbis"]
-[ext_resource type="Texture2D" uid="uid://cpg45fx4e66k8" path="res://Sprites/Items/item1BIT_shovel.png" id="7_rd8xl"]
-[ext_resource type="Texture2D" uid="uid://dtb7xq3hesl66" path="res://Tileset/meat.png" id="8_i5qe8"]
-[ext_resource type="Texture2D" uid="uid://btfm6nyxsa1x6" path="res://Tileset/up_arrow.tres" id="8_opk5w"]
-[ext_resource type="Texture2D" uid="uid://dy6bwpjkn3slj" path="res://Sprites/Items/wood.png" id="9_3g3jg"]
-[ext_resource type="Script" path="res://Scripts/message_panel.gd" id="12_y1iib"]
-[ext_resource type="Texture2D" uid="uid://vlnnqf5hpd5t" path="res://Tileset/action.tres" id="13_1y4k6"]
-[ext_resource type="Script" path="res://Scripts/SettingsMenu.gd" id="14_64n3d"]
-[ext_resource type="Script" path="res://Scripts/music_manager.gd" id="15_652dt"]
-[ext_resource type="Texture2D" uid="uid://dasxmuthg2mrd" path="res://Sprites/Items/animated-moon.png" id="15_bw071"]
-[ext_resource type="Texture2D" uid="uid://bshmkc5icoodo" path="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Dog Walk D.png" id="15_q4jb7"]
-[ext_resource type="Texture2D" uid="uid://cmyle567bt7wx" path="res://Sprites/Items/bigsaw.png" id="16_3deiw"]
-[ext_resource type="Script" path="res://Scripts/rotation-saw.gd" id="17_wkdb2"]
-[ext_resource type="Texture2D" uid="uid://2pg62wan1crs" path="res://Tileset/grabber.tres" id="19_8xsk3"]
+[ext_resource type="Texture2D" uid="uid://bu6wqmxaqbpea" path="res://SPRITES/ITEMS/sun.png" id="5_87rmp"]
+[ext_resource type="Texture2D" uid="uid://duoofrnk02de2" path="res://SPRITES/ITEMS/moon.png" id="6_fkbis"]
+[ext_resource type="Texture2D" uid="uid://cpg45fx4e66k8" path="res://SPRITES/ITEMS/item1BIT_shovel.png" id="7_rd8xl"]
+[ext_resource type="Texture2D" uid="uid://dtb7xq3hesl66" path="res://TILESET/meat.png" id="8_i5qe8"]
+[ext_resource type="Texture2D" uid="uid://btfm6nyxsa1x6" path="res://TILESET/up_arrow.tres" id="8_opk5w"]
+[ext_resource type="Texture2D" uid="uid://dy6bwpjkn3slj" path="res://SPRITES/ITEMS/wood.png" id="9_3g3jg"]
+[ext_resource type="Script" path="res://SCRIPTS/message_panel.gd" id="12_y1iib"]
+[ext_resource type="Texture2D" uid="uid://vlnnqf5hpd5t" path="res://TILESET/action.tres" id="13_1y4k6"]
+[ext_resource type="Script" path="res://SCRIPTS/SettingsMenu.gd" id="14_64n3d"]
+[ext_resource type="Script" path="res://SCRIPTS/music_manager.gd" id="15_652dt"]
+[ext_resource type="Texture2D" uid="uid://dasxmuthg2mrd" path="res://SPRITES/ITEMS/animated-moon.png" id="15_bw071"]
+[ext_resource type="Texture2D" uid="uid://bshmkc5icoodo" path="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Walk D.png" id="15_q4jb7"]
+[ext_resource type="Texture2D" uid="uid://cmyle567bt7wx" path="res://SPRITES/ITEMS/bigsaw.png" id="16_3deiw"]
+[ext_resource type="Script" path="res://SCRIPTS/rotation-saw.gd" id="17_wkdb2"]
+[ext_resource type="Texture2D" uid="uid://2pg62wan1crs" path="res://TILESET/grabber.tres" id="19_8xsk3"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_aqw0e"]
 color = Color(0, 0, 0, 0)
@@ -453,15 +453,16 @@ velocity_multiplier = 500.0
 script = ExtResource("4_3wit5")
 
 [node name="FadeCanvas-top" type="ColorRect" parent="CanvasLayer"]
+auto_translate_mode = 2
 offset_right = 648.0
 offset_bottom = 300.0
-auto_translate = false
 localize_numeral_system = false
 mouse_force_pass_scroll_events = false
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="FadeCanvas-mid" type="ColorRect" parent="CanvasLayer"]
+auto_translate_mode = 2
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -475,12 +476,12 @@ grow_horizontal = 0
 grow_vertical = 2
 rotation = -3.14159
 pivot_offset = Vector2(6.10352e-05, 150)
-auto_translate = false
 localize_numeral_system = false
 mouse_force_pass_scroll_events = false
 color = Color(0, 0, 0, 1)
 
 [node name="FadeCanvas-bottom" type="ColorRect" parent="CanvasLayer"]
+auto_translate_mode = 2
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -488,7 +489,6 @@ offset_top = 3800.0
 offset_right = 650.0
 offset_bottom = 4100.0
 grow_vertical = 0
-auto_translate = false
 localize_numeral_system = false
 mouse_force_pass_scroll_events = false
 color = Color(0, 0, 0, 1)
@@ -664,12 +664,12 @@ size_flags_horizontal = 4
 color = Color(0, 0, 0, 1)
 
 [node name="text" type="Label" parent="CanvasLayer/message_panel/message_border/message_canvas"]
+auto_translate_mode = 2
 layout_mode = 0
 offset_left = 11.0
 offset_top = 6.0
 offset_right = 599.0
 offset_bottom = 165.0
-auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_7g5vk")
@@ -726,12 +726,12 @@ size_flags_horizontal = 4
 color = Color(0, 0, 0, 1)
 
 [node name="text" type="Label" parent="CanvasLayer/message_panel/congratulations_message/message_canvas"]
+auto_translate_mode = 2
 layout_mode = 0
 offset_left = 11.0
 offset_top = 6.0
 offset_right = 599.0
 offset_bottom = 280.0
-auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_7g5vk")

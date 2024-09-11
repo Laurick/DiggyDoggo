@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6dug1773dokf"
-path="res://.godot/imported/HEROS1bit_Adventurer JumpRoll U.png-24203f413f5fa0aace110ad02bc1ae19.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer JumpRoll U.png-b6ca50a62aa7832ca2c2f9cbca4df7cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer JumpRoll U.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer JumpRoll U.png-24203f413f5fa0aace110ad02bc1ae19.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer JumpRoll U.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer JumpRoll U.png-b6ca50a62aa7832ca2c2f9cbca4df7cd.ctex"]
 
 [params]
 

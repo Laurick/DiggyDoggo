@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcxmefh0o2bjb"
-path="res://.godot/imported/HEROS1bit_Princess Push R.png-06113a39dc317eecc6aae89c8160dc05.ctex"
+path="res://.godot/imported/HEROS1bit_Princess Push R.png-578159c960ba837ae3e462cbb8b5c5c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Princess Push R.png"
-dest_files=["res://.godot/imported/HEROS1bit_Princess Push R.png-06113a39dc317eecc6aae89c8160dc05.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Princess Push R.png"
+dest_files=["res://.godot/imported/HEROS1bit_Princess Push R.png-578159c960ba837ae3e462cbb8b5c5c8.ctex"]
 
 [params]
 
