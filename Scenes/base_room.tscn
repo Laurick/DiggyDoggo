@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://bkix8aaefcba1"]
 
-[ext_resource type="Script" path="res://script/room.gd" id="1_aq22n"]
+[ext_resource type="Script" path="res://Scripts/room.gd" id="1_aq22n"]
 [ext_resource type="Texture2D" uid="uid://dlwbyxv5a0lhc" path="res://Graphics/Tileset/monochrome_tilemap_transparent_packed.png" id="2_3amnu"]
-[ext_resource type="PackedScene" uid="uid://bl6q3ostqr6q" path="res://scene/door.tscn" id="3_dbp7y"]
-[ext_resource type="PackedScene" uid="uid://bm3lmc63r3lrf" path="res://scene/open_door_button.tscn" id="4_5ovgp"]
+[ext_resource type="PackedScene" uid="uid://bl6q3ostqr6q" path="res://Scenes/door.tscn" id="3_dbp7y"]
+[ext_resource type="PackedScene" uid="uid://bm3lmc63r3lrf" path="res://Scenes/open_door_button.tscn" id="4_5ovgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qadqn"]
 size = Vector2(144, 144)

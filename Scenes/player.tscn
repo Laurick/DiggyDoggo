@@ -1,14 +1,14 @@
 [gd_scene load_steps=34 format=3 uid="uid://de0pmnn81f0e"]
 
-[ext_resource type="Script" path="res://script/player.gd" id="1_5jcwf"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_5jcwf"]
 [ext_resource type="Texture2D" uid="uid://dtms5edf3ke5m" path="res://Graphics/Sprites/Doggo/doggoSpriteSheet.png" id="2_2gpcj"]
-[ext_resource type="Script" path="res://script/player_UI.gd" id="3_fo4ap"]
+[ext_resource type="Script" path="res://Scripts/player_UI.gd" id="3_fo4ap"]
 [ext_resource type="Texture2D" uid="uid://xq8ajmmmcjcv" path="res://Graphics/Tileset/thought.tres" id="3_fwhsp"]
 [ext_resource type="Texture2D" uid="uid://dtb7xq3hesl66" path="res://Graphics/Tileset/meat.png" id="4_x7g4e"]
 [ext_resource type="Texture2D" uid="uid://dy6bwpjkn3slj" path="res://Graphics/Sprites/Items/wood.png" id="5_vj8aq"]
 [ext_resource type="Texture2D" uid="uid://cpg45fx4e66k8" path="res://Graphics/Sprites/Items/item1BIT_shovel.png" id="6_5lx7v"]
 [ext_resource type="Texture2D" uid="uid://c65sv6o7qatr8" path="res://Graphics/Sprites/Doggo/particles.png" id="8_umynj"]
-[ext_resource type="PackedScene" uid="uid://deorawfpj56s8" path="res://scene/hourglass.tscn" id="9_dnn08"]
+[ext_resource type="PackedScene" uid="uid://deorawfpj56s8" path="res://Scenes/hourglass.tscn" id="9_dnn08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5whl"]
 radius = 4.0

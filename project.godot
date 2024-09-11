@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="DiggyDoggo"
-run/main_scene="res://scene/world.tscn"
+run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://game-icon.png"
 
 [autoload]
 
-dungeon_generation="*res://script/dungeon_generation.gd"
-Globals="*res://script/Globals.gd"
-AudioManager="*res://scene/audio_manager.tscn"
+dungeon_generation="*res://Scripts/dungeon_generation.gd"
+Globals="*res://Scripts/Globals.gd"
+AudioManager="*res://Scenes/audio_manager.tscn"
 
 [display]
 

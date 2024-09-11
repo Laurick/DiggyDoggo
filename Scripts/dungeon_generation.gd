@@ -71,7 +71,7 @@ func instantiate_new_room(index:int) -> Node2D:
 	return rooms[index].instantiate()
 	
 func preload_all_scenes():
-	var directory_path = "res://scene/levels/"
+	var directory_path = "res://Scenes/Level/"
 	var dir = DirAccess.open(directory_path)
 	
 	if dir:

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cv5r5wwjufsy4"]
 
-[ext_resource type="Script" path="res://script/saw.gd" id="1_unycl"]
+[ext_resource type="Script" path="res://Scripts/saw.gd" id="1_unycl"]
 [ext_resource type="Texture2D" uid="uid://cmyle567bt7wx" path="res://Graphics/Sprites/Items/bigsaw.png" id="2_fdxq1"]
-[ext_resource type="Script" path="res://script/damager.gd" id="3_23w6n"]
+[ext_resource type="Script" path="res://Scripts/damager.gd" id="3_23w6n"]
 
 [sub_resource type="Curve2D" id="Curve2D_dl0mw"]
 resource_local_to_scene = true
