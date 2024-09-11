@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cw6gvef1rhq6k"]
 
-[ext_resource type="Script" path="res://SCRIPTS/spikes.gd" id="1_opu6y"]
-[ext_resource type="Texture2D" uid="uid://cvclghebh1hnf" path="res://Tileset/spikes.tres" id="2_ifilt"]
-[ext_resource type="Script" path="res://SCRIPTS/damager.gd" id="3_u5bu2"]
+[ext_resource type="Script" path="res://script/spikes.gd" id="1_opu6y"]
+[ext_resource type="Texture2D" uid="uid://cvclghebh1hnf" path="res://Graphics/Tileset/spikes.tres" id="2_ifilt"]
+[ext_resource type="Script" path="res://script/damager.gd" id="3_u5bu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pntkd"]
 size = Vector2(12, 12)

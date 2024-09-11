@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cncapwdsn685g"
+path="res://.godot/imported/DavidKBD - InterstellarPack - 05 - Forgotten Station.ogg-721d6b5fa6502070802d089e0d48b70a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Music/DavidKBD - InterstellarPack - 05 - Forgotten Station.ogg"
+dest_files=["res://.godot/imported/DavidKBD - InterstellarPack - 05 - Forgotten Station.ogg-721d6b5fa6502070802d089e0d48b70a.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

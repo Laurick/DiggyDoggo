@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://qo18w5b8ecoc"]
 
 [ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://Nodes/Enemies/saw.tscn" id="1_qe0cf"]
-[ext_resource type="Texture2D" uid="uid://c6ulmho1dfor2" path="res://Sprites/Items/minisaw.png" id="2_4xqlr"]
+[ext_resource type="Texture2D" uid="uid://c6ulmho1dfor2" path="res://Graphics/Sprites/Items/minisaw.png" id="2_4xqlr"]
 
 [sub_resource type="Curve2D" id="Curve2D_h8117"]
 resource_local_to_scene = true
