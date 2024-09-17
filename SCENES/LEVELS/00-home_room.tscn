@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b6q1unhgt07gg" path="res://SPRITES/ITEMS/fire_off.png" id="4_py6uy"]
 [ext_resource type="Texture2D" uid="uid://c5eq10777xnh0" path="res://TILESET/up-bed-f1.tres" id="5_tqc46"]
 [ext_resource type="Texture2D" uid="uid://ca34ysrvfpiux" path="res://TILESET/up-bed-f2.tres" id="6_70ksy"]
-[ext_resource type="Texture2D" uid="uid://b0qgxxjs84tr5" path="res://SPRITES/HEROS/spritesheets/HEROS1bit_Dog Idle D.png" id="7_mamle"]
+[ext_resource type="Texture2D" uid="uid://b0qgxxjs84tr5" path="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Idle D.png" id="7_mamle"]
 [ext_resource type="Texture2D" uid="uid://bcgk3ngxgugp4" path="res://TILESET/up_arrow_simple.tres" id="8_1qdnh"]
 [ext_resource type="Texture2D" uid="uid://biwhh8mnetiya" path="res://SPRITES/ITEMS/item1BIT_skull.png" id="9_6n6m8"]
 [ext_resource type="Texture2D" uid="uid://dtb7xq3hesl66" path="res://TILESET/meat.png" id="9_qchtx"]

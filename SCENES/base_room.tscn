@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bkix8aaefcba1"]
 
 [ext_resource type="Script" path="res://SCRIPTS/room.gd" id="1_aq22n"]
-[ext_resource type="Texture2D" uid="uid://dlwbyxv5a0lhc" path="res://TILESET/monochrome_tilemap_transparent_packed.png" id="2_3amnu"]
+[ext_resource type="Texture2D" uid="uid://dujb3cb18k61n" path="res://TILESET/monochrome_tilemap_transparent_packed.png" id="2_3amnu"]
 [ext_resource type="PackedScene" uid="uid://bl6q3ostqr6q" path="res://SCENES/door.tscn" id="3_dbp7y"]
 [ext_resource type="PackedScene" uid="uid://bm3lmc63r3lrf" path="res://SCENES/open_door_button.tscn" id="4_5ovgp"]
 

@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://cv2ip2oxkg4ln"
+uid="uid://bs65mxgsk8nfd"
 path="res://.godot/imported/DavidKBD - InterstellarPack - 09 - Spiral of Plasma.ogg-4dd17681d2f032103f09c778128f7aec.oggvorbisstr"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/DavidKBD - InterstellarPack - 09 - Spiral of 
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

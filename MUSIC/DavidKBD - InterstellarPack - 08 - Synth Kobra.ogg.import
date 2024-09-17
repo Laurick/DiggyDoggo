@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://cn5spiyal8jno"
+uid="uid://dtk385pdfsvlx"
 path="res://.godot/imported/DavidKBD - InterstellarPack - 08 - Synth Kobra.ogg-75e8aac9532b80ca45e17fdbc9678407.oggvorbisstr"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/DavidKBD - InterstellarPack - 08 - Synth Kobr
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

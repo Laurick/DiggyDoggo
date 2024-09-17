@@ -15,7 +15,7 @@ config/version="0.0.1"
 run/main_scene="res://SCENES/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
-config/icon="res://SPRITES/ITEMS/game-icon.png"
+config/icon="res://game-icon.png"
 run/size/resizable=true
 run/size/mode=4
 

@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://d2wjdf685vkfi"
+uid="uid://bbbpigwwm12cu"
 path="res://.godot/imported/DavidKBD - InterstellarPack - 02 - Plasma Storm.ogg-e1f344598132f1c992c5844ae7a5ba85.oggvorbisstr"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/DavidKBD - InterstellarPack - 02 - Plasma Sto
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4

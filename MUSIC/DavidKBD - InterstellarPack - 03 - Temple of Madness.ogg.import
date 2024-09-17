@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://diotfaotuv48k"
+uid="uid://80hf1gmjdjur"
 path="res://.godot/imported/DavidKBD - InterstellarPack - 03 - Temple of Madness.ogg-644b604e690751a1fad55d10561d036e.oggvorbisstr"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/DavidKBD - InterstellarPack - 03 - Temple of 
 
 [params]
 
-loop=true
-loop_offset=0.0
-bpm=0.0
+loop=false
+loop_offset=0
+bpm=0
 beat_count=0
 bar_beats=4
