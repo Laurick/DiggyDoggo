@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8n8hberfaafv"]
+
+[ext_resource type="LabelSettings" uid="uid://bnbf06tdy2ucn" path="res://STYLES/LabelStyle.tres" id="1_1ktww"]
+[ext_resource type="Script" path="res://Components/HighscoreTime.gd" id="1_pmqxi"]
+[ext_resource type="Script" path="res://Components/BlinkComponent.gd" id="3_xakiq"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_top = 724.0
+offset_right = 528.0
+offset_bottom = 724.0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("1_pmqxi")
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+text = "HIGHSCORE_TIME_TITLE"
+label_settings = ExtResource("1_1ktww")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkComponent" type="Node" parent="VBoxContainer/Title" node_paths=PackedStringArray("target")]
+script = ExtResource("3_xakiq")
+target = NodePath("..")
+duration = 0.5
+times_to_blink = -1
+autostart = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[connection signal="tree_exited" from="VBoxContainer/Title/BlinkComponent" to="VBoxContainer/Title/BlinkComponent" method="_on_tree_exited"]

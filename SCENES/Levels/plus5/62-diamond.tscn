@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgjgly35o46pe"]
+
+[ext_resource type="PackedScene" uid="uid://deuvww0kfufr" path="res://SCENES/base_room10.tscn" id="1_jgq6p"]
+[ext_resource type="PackedScene" uid="uid://cdipbdxiah3gs" path="res://SCENES/PICKABLES/pickable_diamond.tscn" id="2_cnckc"]
+[ext_resource type="PackedScene" uid="uid://cvggfb6j7mwyw" path="res://SCENES/OBSTACLES/skull1.tscn" id="3_qgfta"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="4_yub8f"]
+
+[sub_resource type="Curve2D" id="Curve2D_dfus7"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -24, 32, 0, 0, 0, 0, -56, 0, 0, 0, 0, 0, -24, 32)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_cre5n"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 88, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 88)
+}
+point_count = 3
+
+[node name="HomeRoom" instance=ExtResource("1_jgq6p")]
+
+[node name="pickable_diamond" parent="." index="8" instance=ExtResource("2_cnckc")]
+position = Vector2(120, 120)
+
+[node name="tree" parent="." index="9" instance=ExtResource("3_qgfta")]
+position = Vector2(24, 136)
+
+[node name="tree2" parent="." index="10" instance=ExtResource("3_qgfta")]
+position = Vector2(136, 136)
+
+[node name="tree3" parent="." index="11" instance=ExtResource("3_qgfta")]
+position = Vector2(24, 16)
+
+[node name="tree4" parent="." index="12" instance=ExtResource("3_qgfta")]
+position = Vector2(136, 16)
+
+[node name="Saw" parent="." index="13" instance=ExtResource("4_yub8f")]
+position = Vector2(96, 40)
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_dfus7")
+
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(-24, 32)
+
+[node name="Saw2" parent="." index="14" instance=ExtResource("4_yub8f")]
+position = Vector2(56, 40)
+
+[node name="Path2D" parent="Saw2" index="0"]
+curve = SubResource("Curve2D_cre5n")
+
+[editable path="Saw"]
+[editable path="Saw2"]

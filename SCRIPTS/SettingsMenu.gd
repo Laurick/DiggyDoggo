@@ -1,5 +1,7 @@
 extends ColorRect
 
+signal on_settings_closed
+
 var config_file = ConfigFile.new()
 var err = config_file.load("user://settings.cfg")
 
@@ -7,6 +9,7 @@ var err = config_file.load("user://settings.cfg")
 @onready var english = $VBoxContainer/Languages/English
 @onready var music_slider = $VBoxContainer/MusicSlider
 @onready var sfx_slider = $VBoxContainer/SFXSlider
+
 
 func _ready():
 	if (err == OK):
@@ -31,6 +34,7 @@ func _ready():
 		_on_music_slider_value_changed(5)
 		_on_sfx_slider_value_changed(5)
 
+
 func _on_music_slider_value_changed(value):
 	var music_index = AudioServer.get_bus_index("Music")
 	if value==0:
@@ -39,6 +43,7 @@ func _on_music_slider_value_changed(value):
 		AudioServer.set_bus_volume_db(music_index, (20 * (log(value) / log(10))) - 20)
 	config_file.set_value("SETTINGS", "MUSIC_VOLUME", value)
 	config_file.save("user://settings.cfg")
+
 
 func _on_sfx_slider_value_changed(value):
 	var sfx_index = AudioServer.get_bus_index("sfx")
@@ -56,6 +61,7 @@ func _on_english_pressed():
 	config_file.set_value("SETTINGS", "LANGUAGE", "en")
 	config_file.save("user://settings.cfg")
 
+
 func _on_spanish_pressed():
 	english.disabled = false
 	spanish.disabled = true
@@ -63,13 +69,11 @@ func _on_spanish_pressed():
 	config_file.set_value("SETTINGS", "LANGUAGE", "es")
 	config_file.save("user://settings.cfg")
 
+
 func _on_back_button_pressed():
-	hide()
+	on_settings_closed.emit()
+
 
 func _on_visibility_changed():
 	if visible: 
-		Engine.time_scale = 0
 		spanish.grab_focus()
-	else: 
-		Engine.time_scale = 1
-		$"../SplashScreen/VBoxContainer/play".grab_focus()

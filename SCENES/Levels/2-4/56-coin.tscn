@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://beflh6jhcaw72"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_hdcw7"]
+[ext_resource type="PackedScene" uid="uid://cv3ji0hiu3mjn" path="res://SCENES/PICKABLES/pickable_coin.tscn" id="2_eud3y"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="3_lm6yp"]
+[ext_resource type="PackedScene" uid="uid://dql7kqrf20e71" path="res://SCENES/OBSTACLES/big_tree.tscn" id="4_kdxau"]
+[ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://SCENES/ENEMIES/saw.tscn" id="5_otrlm"]
+
+[sub_resource type="Curve2D" id="Curve2D_rskmf"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -72, 96, 0, 0, 0, 0, -32, 16, 0, 0, 0, 0, 15.9997, 104, 0, 0, 0, 0, -32, 15.9999, 0, 0, 0, 0, -72.0002, 95.9998)
+}
+point_count = 5
+
+[node name="HomeRoom" instance=ExtResource("1_hdcw7")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(120, 40)
+
+[node name="pickable_coin" parent="." index="8" instance=ExtResource("2_eud3y")]
+position = Vector2(80, 80)
+
+[node name="tree" parent="." index="9" instance=ExtResource("3_lm6yp")]
+position = Vector2(40, 72)
+
+[node name="tree4" parent="." index="10" instance=ExtResource("3_lm6yp")]
+position = Vector2(72, 40)
+
+[node name="tree5" parent="." index="11" instance=ExtResource("3_lm6yp")]
+position = Vector2(88, 40)
+
+[node name="tree6" parent="." index="12" instance=ExtResource("3_lm6yp")]
+position = Vector2(120, 72)
+
+[node name="tree8" parent="." index="13" instance=ExtResource("3_lm6yp")]
+position = Vector2(88, 120)
+
+[node name="tree9" parent="." index="14" instance=ExtResource("3_lm6yp")]
+position = Vector2(72, 120)
+
+[node name="tree3" parent="." index="15" instance=ExtResource("4_kdxau")]
+position = Vector2(120, 80)
+
+[node name="tree7" parent="." index="16" instance=ExtResource("4_kdxau")]
+position = Vector2(40, 80)
+
+[node name="Saw" parent="." index="17" instance=ExtResource("5_otrlm")]
+position = Vector2(112, 24)
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_rskmf")
+
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(-72, 96)
+
+[node name="Saw2" parent="." index="18" instance=ExtResource("5_otrlm")]
+position = Vector2(48, 136)
+rotation = 3.14159
+
+[node name="Path2D" parent="Saw2" index="0"]
+curve = SubResource("Curve2D_rskmf")
+
+[node name="PathFollow2D" parent="Saw2/Path2D" index="0"]
+position = Vector2(-72, 96)
+
+[editable path="Saw"]
+[editable path="Saw2"]

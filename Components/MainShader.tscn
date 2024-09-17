@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cle1gyjtf4l1r"]
+
+[ext_resource type="Shader" path="res://SHADERS/crt.gdshader" id="1_3coui"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y0w7u"]
+shader = ExtResource("1_3coui")
+shader_parameter/vertJerkOpt = 0.0
+shader_parameter/vertMovementOpt = 0.0
+shader_parameter/bottomStaticOpt = 0.0
+shader_parameter/bottomStaticStrenth = 0.0
+shader_parameter/scalinesOpt = 2.0
+shader_parameter/rgbOffsetOpt = 0.3
+shader_parameter/horzFuzzOpt = 0.2
+shader_parameter/curveIntensityA = 5.0
+shader_parameter/curveIntensityB = 2.0
+shader_parameter/curveIntensityC = 0.5
+shader_parameter/curveIntensityD = 1.0
+
+[node name="shader" type="ColorRect"]
+material = SubResource("ShaderMaterial_y0w7u")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true

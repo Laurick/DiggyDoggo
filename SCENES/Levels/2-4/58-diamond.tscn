@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4usp6utiepvk"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_8y47p"]
+[ext_resource type="PackedScene" uid="uid://cdipbdxiah3gs" path="res://SCENES/PICKABLES/pickable_diamond.tscn" id="2_5sed0"]
+[ext_resource type="PackedScene" uid="uid://dw7p43bbdrxtn" path="res://SCENES/ENEMIES/tiny-circular-saw.tscn" id="4_0px8l"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="5_5ld03"]
+
+[sub_resource type="Curve2D" id="Curve2D_jw1qv"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(-25.2683, -14.946, 25.2683, 14.946, 80, 40, 0, 0, 0, 0, 80, 40, -14.0104, -36.4166, 14.0104, 36.4166, 120, 56, 0, 0, 0, 0, 64, 72, 13.3658, 14.4669, -13.3658, -14.4669, 56, 64, 0, 0, 0, 0, 48, 48, -22.897, 23.7724, 22.897, -23.7724, 64, 8, 0, 0, 0, 0, 112, 8, 0, 0, 0, 0, 88, 0, 0, 0, 0, 0, 56, 16, 0, 0, 0, 0, 48, 56, 0, 0, 0, 0, 72, 72, 0, 0, 0, 0, 112, 80, 0, 0, 0, 0, 120, 64, 0, 0, 0, 0, 112, 40, -10.0976, -11.9794, 10.0976, 11.9794, 80, 40)
+}
+point_count = 16
+
+[node name="HomeRoom" instance=ExtResource("1_8y47p")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(80, 56)
+
+[node name="pickable_diamond" parent="." index="8" instance=ExtResource("2_5sed0")]
+position = Vector2(80, 104)
+
+[node name="tree" parent="." index="9" instance=ExtResource("5_5ld03")]
+position = Vector2(24, 136)
+
+[node name="tree2" parent="." index="10" instance=ExtResource("5_5ld03")]
+position = Vector2(136, 136)
+
+[node name="tree3" parent="." index="11" instance=ExtResource("5_5ld03")]
+position = Vector2(24, 24)
+
+[node name="tree4" parent="." index="12" instance=ExtResource("5_5ld03")]
+position = Vector2(136, 24)
+
+[node name="Saw" parent="." index="13" instance=ExtResource("4_0px8l")]
+position = Vector2(40, 32)
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_jw1qv")
+
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(79.9285, 40.0504)
+
+[editable path="Saw"]

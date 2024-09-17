@@ -1,22 +1,22 @@
+class_name Pickable
 extends Area2D
 
-class_name Pickable
 
-@export var type:resource_type
+@export var type:ResourceType
 
 @onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
 
-signal on_picked;
+signal on_picked
 
-enum resource_type {food, wood, shovel}
+enum ResourceType {food, wood, shovel, coin, diamond}
 var is_picked:bool = false
 
 func _ready():
 	set_state(false)
 
 func pick():
-	Globals.inventory.append(type)
+	Globals.add_item(type)
 	is_picked = true
 	on_picked.emit()
 	call_deferred("set_state", false)
@@ -29,7 +29,3 @@ func set_state(new_state):
 	collision_shape_2d.disabled = !new_state
 	sprite_2d.visible = new_state
 	
-
-
-
-

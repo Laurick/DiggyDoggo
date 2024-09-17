@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctqpkogppwmtu"
-path="res://.godot/imported/HEROS1bit_Dog Death.png-3ded4f87d34aafe15b0e352f8eb46883.ctex"
+path="res://.godot/imported/HEROS1bit_Dog Death.png-3d75941066431ae0f67c8e8f8e1d1a1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Dog Death.png"
-dest_files=["res://.godot/imported/HEROS1bit_Dog Death.png-3ded4f87d34aafe15b0e352f8eb46883.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Death.png"
+dest_files=["res://.godot/imported/HEROS1bit_Dog Death.png-3d75941066431ae0f67c8e8f8e1d1a1a.ctex"]
 
 [params]
 

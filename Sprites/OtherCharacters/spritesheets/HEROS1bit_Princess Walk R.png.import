@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dje4n0vbprg4p"
-path="res://.godot/imported/HEROS1bit_Princess Walk R.png-5e21038e7424a7bacc54c96579f5fdd6.ctex"
+path="res://.godot/imported/HEROS1bit_Princess Walk R.png-2e080dcc9598b6a628477c1405a921f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Princess Walk R.png"
-dest_files=["res://.godot/imported/HEROS1bit_Princess Walk R.png-5e21038e7424a7bacc54c96579f5fdd6.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Princess Walk R.png"
+dest_files=["res://.godot/imported/HEROS1bit_Princess Walk R.png-2e080dcc9598b6a628477c1405a921f1.ctex"]
 
 [params]
 

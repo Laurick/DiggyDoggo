@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi1yew1mnv3vs"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_5gpek"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_e2t1d"]
+[ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://SCENES/ENEMIES/saw.tscn" id="3_damyn"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="3_gpk6j"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="4_ypj82"]
+
+[sub_resource type="Curve2D" id="Curve2D_ynxi6"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -24, 0, 0, 0, 0, 0, -16, 16, 0, 0, 0, 0, -16, 96, 0, 0, 0, 0, -32, 112, 0, 0, 0, 0, -16, 96, 0, 0, 0, 0, 64, 96, 0, 0, 0, 0, 80, 112, 0, 0, 0, 0, 64, 96, 0, 0, 0, 0, 64, 16, 0, 0, 0, 0, 80, 0, 0, 0, 0, 0, 64, 16, 0, 0, 0, 0, -16, 16, 0, 0, 0, 0, -24, 0)
+}
+point_count = 13
+
+[node name="HomeRoom" instance=ExtResource("1_5gpek")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(56, 88)
+
+[node name="pickable_food" parent="." index="8" instance=ExtResource("2_e2t1d")]
+position = Vector2(104, 72)
+
+[node name="Saw" parent="." index="9" instance=ExtResource("3_damyn")]
+position = Vector2(56, 24)
+movement_speed = 0.5
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_ynxi6")
+
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(-24, 0)
+
+[node name="Obstacle9" parent="." index="10" instance=ExtResource("4_ypj82")]
+position = Vector2(80, 80)
+
+[node name="tree" parent="." index="11" instance=ExtResource("3_gpk6j")]
+position = Vector2(104, 24)
+
+[node name="tree2" parent="." index="12" instance=ExtResource("3_gpk6j")]
+position = Vector2(136, 56)
+
+[node name="tree3" parent="." index="13" instance=ExtResource("3_gpk6j")]
+position = Vector2(136, 104)
+
+[node name="tree4" parent="." index="14" instance=ExtResource("3_gpk6j")]
+position = Vector2(104, 136)
+
+[node name="tree5" parent="." index="15" instance=ExtResource("3_gpk6j")]
+position = Vector2(56, 136)
+
+[node name="tree6" parent="." index="16" instance=ExtResource("3_gpk6j")]
+position = Vector2(24, 104)
+
+[node name="tree7" parent="." index="17" instance=ExtResource("3_gpk6j")]
+position = Vector2(24, 56)
+
+[node name="tree8" parent="." index="18" instance=ExtResource("3_gpk6j")]
+position = Vector2(56, 24)
+
+[editable path="Saw"]

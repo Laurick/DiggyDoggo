@@ -1,10 +1,11 @@
+class_name CanvasController
 extends CanvasLayer
 
-class_name canvas_controller
 
 @onready var food_sprite:TextureRect = $ColorRect/food_parent/food
 @onready var wood_sprite:TextureRect = $ColorRect/wood_parent/wood
 @onready var shovel_sprite:TextureRect = $ColorRect/shovel_parent/shovel
+@onready var score_label:Label = $ColorRect/ControlScore/Score
 
 @onready var progress_bar:Slider = $ColorRect/Control/ProgressBar
 @onready var time_label:Label = $ColorRect/Time
@@ -13,19 +14,18 @@ class_name canvas_controller
 @onready var message_panel = $message_panel
 
 @onready var time_anim = $ColorRect/time_anim
-@onready var splash_screen = $SplashScreen
 
 @onready var control = $ColorRect/Control
 
-var color_red:Color = Color("ff666f")
+var menu_active: Control
 
-var start_day_hour:int = 6
-var end_day_hour:int = 20
+const START_DAY_HOUR:int = 6
+const END_DAY_HOUR:int = 20
 
-var current_hour: int = 0
-var current_minute: int = 0
+var current_hour:int = 0
+var current_minute:int = 0
 
-signal on_message_closed
+signal on_message_closed(key:String)
 
 func _process(_delta):
 	if timer.is_stopped():
@@ -33,69 +33,71 @@ func _process(_delta):
 	update_time_and_progress()
 
 func _ready():
-	message_panel.connect("on_message_closed", message_closed)
+	message_panel.on_panel_closed.connect(message_closed)
 	for item in Globals.inventory:
 		pick_item(item)
-		
-	if Globals.current_day == 0 && Globals.is_splash_screen_open:
-		splash_screen.show()
-		$SplashScreen/VBoxContainer/play.call_deferred("grab_focus")
 
-func _input(event):
-	if event.is_action_released("ui_cancel"):
-		$SettingsMenu.visible = !$SettingsMenu.visible
+func set_text_score():
+	score_label.text = str(Globals.score)
 
-func pick_item(item:Pickable.resource_type):
+func pick_item(item:Pickable.ResourceType):
 	match item:
-		Pickable.resource_type.food:
+		Pickable.ResourceType.food:
 			food_sprite.modulate.a = 1
-		Pickable.resource_type.wood:
+		Pickable.ResourceType.wood:
 			wood_sprite.modulate.a = 1
-		Pickable.resource_type.shovel:
+		Pickable.ResourceType.shovel:
 			shovel_sprite.modulate.a = 1
+	set_text_score()
+	score_label.modulate = Colors.COLOR_GREEN
+	create_tween().tween_property(score_label, "modulate", Color.WHITE, 0.5)
 
 func remove_items():
 	food_sprite.modulate.a = 0.25
 	wood_sprite.modulate.a = 0.25
 	shovel_sprite.modulate.a = 0.25
 
-func remove_item(item:Pickable.resource_type):
+func remove_item(item:Pickable.ResourceType):
 		match item:
-			Pickable.resource_type.food:
+			Pickable.ResourceType.food:
 				food_sprite.modulate.a = 0.25
-			Pickable.resource_type.wood:
+			Pickable.ResourceType.wood:
 				wood_sprite.modulate.a = 0.25
-			Pickable.resource_type.shovel:
+			Pickable.ResourceType.shovel:
 				shovel_sprite.modulate.a = 0.25
 
 func get_completion_time() -> String:
-	var days = Globals.current_day
-	var progress = 100 -(timer.time_left / Globals.current_daylight_duration) * 100
+	var days:int = Globals.current_day
+	var progress:float = 100 - (timer.time_left / Globals.current_daylight_duration) * 100
 
-	var total_minutes = int(lerp(start_day_hour * 60, end_day_hour * 60, progress / 100))
-	current_hour = total_minutes / 60 -6
+	var total_minutes:int = int(lerp(START_DAY_HOUR * 60, END_DAY_HOUR * 60, progress / 100))
+	current_hour = (total_minutes / 60) - START_DAY_HOUR
 	current_minute = total_minutes % 60
 	
 	var victory_message = tr("VICTORY_MESSAGE")
 	
 	return victory_message %[days, current_hour, current_minute, Globals.number_of_hits]
 
-func localize_and_show_message(message_key:String):
-	message_panel.show_message(tr(message_key))
+func localize_and_show_message_record(score:int):
+	match Globals.game_mode:
+		Globals.GAME_MODE.arcade:
+			message_panel.show_message_record(tr("RECORD_ARCADE")%[score], "RECORD_ARCADE")
+		Globals.GAME_MODE.time:
+			message_panel.show_message_record(tr("RECORD_TIME")%[score], "RECORD_TIME")
 
-func show_message(message_key:String):
-	message_panel.show_message(message_key)
+func show_message(message:String, message_key:String):
+	message_panel.show_message(message, message_key)
 
 func show_final_message():
-	message_panel.show_final_message(get_completion_time())
+	message_panel.show_final_message(get_completion_time(), "VICTORY_MESSAGE")
 
-func message_closed(): 
-	on_message_closed.emit()
+func message_closed(key:String): 
+	on_message_closed.emit(key)
 
 func update_time_and_progress():
-	var progress = 100 -(timer.time_left / Globals.current_daylight_duration) * 100
+	var progress:float = 100 - (timer.time_left / Globals.current_daylight_duration) * 100
 
-	var total_minutes = int(lerp(start_day_hour * 60, end_day_hour * 60, progress / 100))
+	var total_minutes:int = int(lerp(START_DAY_HOUR * 60, END_DAY_HOUR * 60, progress / 100))
 	current_hour = total_minutes / 60
 	current_minute = total_minutes % 60
 	
@@ -113,15 +115,15 @@ func update_time_and_progress():
 	if progress < 80:
 		control.modulate = Color.WHITE
 	else:
-		control.modulate = color_red
+		control.modulate = Colors.COLOR_RED
 
-func flash_item(item:Pickable.resource_type):
+func flash_item(item:Pickable.ResourceType):
 	match item:
-			Pickable.resource_type.food:
+			Pickable.ResourceType.food:
 				flash_sprite(food_sprite)
-			Pickable.resource_type.wood:
+			Pickable.ResourceType.wood:
 				flash_sprite(wood_sprite)
-			Pickable.resource_type.shovel:
+			Pickable.ResourceType.shovel:
 				flash_sprite(shovel_sprite)
 
 func flash_sprite(texture:TextureRect):
@@ -133,10 +135,3 @@ func flash_sprite(texture:TextureRect):
 
 func flash_time_left():
 	time_anim.play("flash")
-
-func _on_play_pressed():
-	splash_screen.hide()
-	Globals.is_splash_screen_open = false
-	
-func _on_settings_pressed():
-	$SettingsMenu.show()

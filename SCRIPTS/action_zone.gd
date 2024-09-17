@@ -1,15 +1,14 @@
-class_name action_zone
-
 extends Area2D
+
+class_name action_zone
 
 @export var type:zone_type
 
-@onready var action_sprite: Sprite2D = $Node2D/Action
+@onready var action_sprite:Sprite2D = $Node2D/Action
 
 enum zone_type {
 	sleep,
-	dig
-	}
+	dig}
 
 func do_action():
 	match type:
@@ -24,9 +23,9 @@ func do_action():
 func show_action():
 	match type:
 		zone_type.sleep:
-			if !Globals.has_item(Pickable.resource_type.food) || !Globals.has_item(Pickable.resource_type.wood): return
+			if !Globals.has_item(Pickable.ResourceType.food) || !Globals.has_item(Pickable.ResourceType.wood): return
 		zone_type.dig:
-			if !Globals.has_item(Pickable.resource_type.shovel) : return
+			if !Globals.has_item(Pickable.ResourceType.shovel) : return
 	action_sprite.visible = true
 
 func hide_action():

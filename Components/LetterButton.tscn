@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://caunx45xfgnun"]
+
+[ext_resource type="Script" path="res://SCENES/LetterButton.gd" id="1_g5bd1"]
+[ext_resource type="Texture2D" uid="uid://bcgk3ngxgugp4" path="res://TILESET/up_arrow_simple.tres" id="2_b8dg4"]
+[ext_resource type="Script" path="res://Components/BlinkComponent.gd" id="3_4oum8"]
+[ext_resource type="LabelSettings" uid="uid://bnbf06tdy2ucn" path="res://STYLES/LabelStyle.tres" id="3_s7mwi"]
+[ext_resource type="AudioStream" uid="uid://bw5p104wtvrqf" path="res://AUDIO/menu.wav" id="4_ak10w"]
+
+[node name="LetterButton" type="VBoxContainer"]
+offset_right = 8.0
+offset_bottom = 23.0
+focus_mode = 2
+alignment = 1
+script = ExtResource("1_g5bd1")
+
+[node name="Up" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_b8dg4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "A"
+label_settings = ExtResource("3_s7mwi")
+horizontal_alignment = 1
+
+[node name="BlinkComponent" type="Node" parent="Label" node_paths=PackedStringArray("target")]
+script = ExtResource("3_4oum8")
+target = NodePath("..")
+
+[node name="Down" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_b8dg4")
+flip_v = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ak10w")
+bus = &"sfx"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

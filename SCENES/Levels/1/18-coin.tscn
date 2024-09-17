@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://22n53mj2qr6t"]
+
+[ext_resource type="PackedScene" uid="uid://bkix8aaefcba1" path="res://SCENES/base_room.tscn" id="1_k4hyh"]
+[ext_resource type="Texture2D" uid="uid://5lihholclpu7" path="res://TILESET/obstacle.tres" id="3_d7oyj"]
+[ext_resource type="PackedScene" uid="uid://cv3ji0hiu3mjn" path="res://SCENES/PICKABLES/pickable_coin.tscn" id="3_xxdwk"]
+
+[node name="HomeRoom" instance=ExtResource("1_k4hyh")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(104, 72)
+
+[node name="pickable_coin" parent="." index="8" instance=ExtResource("3_xxdwk")]
+position = Vector2(104, 104)
+
+[node name="Obstacle" type="Sprite2D" parent="." index="9"]
+position = Vector2(104, 40)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle21" type="Sprite2D" parent="." index="10"]
+position = Vector2(136, 40)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle22" type="Sprite2D" parent="." index="11"]
+position = Vector2(104, 24)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle2" type="Sprite2D" parent="." index="12"]
+position = Vector2(88, 40)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle3" type="Sprite2D" parent="." index="13"]
+position = Vector2(72, 40)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle4" type="Sprite2D" parent="." index="14"]
+position = Vector2(56, 40)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle5" type="Sprite2D" parent="." index="15"]
+position = Vector2(40, 40)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle6" type="Sprite2D" parent="." index="16"]
+position = Vector2(40, 56)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle7" type="Sprite2D" parent="." index="17"]
+position = Vector2(40, 72)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle8" type="Sprite2D" parent="." index="18"]
+position = Vector2(40, 88)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle9" type="Sprite2D" parent="." index="19"]
+position = Vector2(40, 104)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle10" type="Sprite2D" parent="." index="20"]
+position = Vector2(40, 120)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle11" type="Sprite2D" parent="." index="21"]
+position = Vector2(56, 120)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle12" type="Sprite2D" parent="." index="22"]
+position = Vector2(72, 104)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle13" type="Sprite2D" parent="." index="23"]
+position = Vector2(88, 120)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle14" type="Sprite2D" parent="." index="24"]
+position = Vector2(104, 120)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle15" type="Sprite2D" parent="." index="25"]
+position = Vector2(120, 104)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle16" type="Sprite2D" parent="." index="26"]
+position = Vector2(104, 88)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle17" type="Sprite2D" parent="." index="27"]
+position = Vector2(88, 72)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle18" type="Sprite2D" parent="." index="28"]
+position = Vector2(72, 72)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle19" type="Sprite2D" parent="." index="29"]
+position = Vector2(120, 72)
+texture = ExtResource("3_d7oyj")
+
+[node name="Obstacle20" type="Sprite2D" parent="." index="30"]
+position = Vector2(120, 40)
+texture = ExtResource("3_d7oyj")

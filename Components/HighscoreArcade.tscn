@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://o4e1qlyhsm02"]
+
+[ext_resource type="Script" path="res://Components/HighscoreArcade.gd" id="1_h8yxb"]
+[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://FONTS/VT323-Regular.ttf" id="1_rr6gq"]
+[ext_resource type="Script" path="res://Components/BlinkComponent.gd" id="3_lyobc"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_top = 724.0
+offset_right = 528.0
+offset_bottom = 724.0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("1_h8yxb")
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rr6gq")
+theme_override_font_sizes/font_size = 50
+text = "HIGHSCORE_ARCADE_TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkComponent" type="Node" parent="VBoxContainer/Title" node_paths=PackedStringArray("target")]
+script = ExtResource("3_lyobc")
+target = NodePath("..")
+duration = 0.5
+times_to_blink = -1
+autostart = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1

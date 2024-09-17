@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0ocv7qwub2sp"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_qlhip"]
+[ext_resource type="PackedScene" uid="uid://c77jag8ytsik0" path="res://SCENES/PICKABLES/pickable_wood.tscn" id="2_rts8o"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="3_0srni"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="5_f6a2v"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="6_7uekd"]
+
+[node name="HomeRoom" instance=ExtResource("1_qlhip")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(88, 104)
+
+[node name="pickable_wood" parent="." index="8" instance=ExtResource("2_rts8o")]
+position = Vector2(72, 56)
+
+[node name="tree" parent="." index="9" instance=ExtResource("5_f6a2v")]
+position = Vector2(72, 72)
+
+[node name="tree2" parent="." index="10" instance=ExtResource("5_f6a2v")]
+position = Vector2(104, 88)
+
+[node name="tree3" parent="." index="11" instance=ExtResource("5_f6a2v")]
+position = Vector2(120, 104)
+
+[node name="tree4" parent="." index="12" instance=ExtResource("5_f6a2v")]
+position = Vector2(88, 120)
+
+[node name="Obstacle" parent="." index="13" instance=ExtResource("6_7uekd")]
+position = Vector2(88, 72)
+
+[node name="Obstacle7" parent="." index="14" instance=ExtResource("6_7uekd")]
+position = Vector2(72, 104)
+
+[node name="Obstacle8" parent="." index="15" instance=ExtResource("6_7uekd")]
+position = Vector2(72, 40)
+
+[node name="Obstacle2" parent="." index="16" instance=ExtResource("6_7uekd")]
+position = Vector2(72, 88)
+
+[node name="Obstacle3" parent="." index="17" instance=ExtResource("6_7uekd")]
+position = Vector2(88, 88)
+
+[node name="Obstacle4" parent="." index="18" instance=ExtResource("6_7uekd")]
+position = Vector2(88, 56)
+
+[node name="Obstacle5" parent="." index="19" instance=ExtResource("6_7uekd")]
+position = Vector2(56, 72)
+
+[node name="Obstacle6" parent="." index="20" instance=ExtResource("6_7uekd")]
+position = Vector2(40, 88)
+
+[node name="Saw" parent="." index="21" instance=ExtResource("3_0srni")]
+position = Vector2(56, 24)
+
+[node name="Saw2" parent="." index="22" instance=ExtResource("3_0srni")]
+position = Vector2(104, 120)
+rotation = 3.14159

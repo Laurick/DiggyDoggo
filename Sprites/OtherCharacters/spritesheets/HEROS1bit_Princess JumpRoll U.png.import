@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2bl1x4dsgnj8"
-path="res://.godot/imported/HEROS1bit_Princess JumpRoll U.png-1ff428ea07aaa955b67967449bb64de5.ctex"
+path="res://.godot/imported/HEROS1bit_Princess JumpRoll U.png-ad79dc988a2f919a576e4cde7c0ac07d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Princess JumpRoll U.png"
-dest_files=["res://.godot/imported/HEROS1bit_Princess JumpRoll U.png-1ff428ea07aaa955b67967449bb64de5.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Princess JumpRoll U.png"
+dest_files=["res://.godot/imported/HEROS1bit_Princess JumpRoll U.png-ad79dc988a2f919a576e4cde7c0ac07d.ctex"]
 
 [params]
 

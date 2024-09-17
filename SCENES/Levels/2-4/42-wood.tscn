@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvxuxe726cl68"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_f45fu"]
+[ext_resource type="PackedScene" uid="uid://c77jag8ytsik0" path="res://SCENES/PICKABLES/pickable_wood.tscn" id="2_qpx3r"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="3_p076w"]
+[ext_resource type="PackedScene" uid="uid://dql7kqrf20e71" path="res://SCENES/OBSTACLES/big_tree.tscn" id="4_ihern"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="5_jdlbs"]
+[ext_resource type="PackedScene" uid="uid://bgw1nycar3ix2" path="res://SCENES/ENEMIES/infinite_trap.tscn" id="6_rljqc"]
+
+[node name="HomeRoom" instance=ExtResource("1_f45fu")]
+position = Vector2(0, 0)
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(80, 104)
+
+[node name="pickable_wood" parent="." index="8" instance=ExtResource("2_qpx3r")]
+position = Vector2(80, 80)
+
+[node name="Obstacle" parent="." index="9" instance=ExtResource("3_p076w")]
+position = Vector2(56, 40)
+
+[node name="tree" parent="." index="10" instance=ExtResource("4_ihern")]
+position = Vector2(72, 48)
+
+[node name="tree2" parent="." index="11" instance=ExtResource("4_ihern")]
+position = Vector2(88, 48)
+
+[node name="Obstacle2" parent="." index="12" instance=ExtResource("3_p076w")]
+position = Vector2(104, 40)
+
+[node name="Obstacle3" parent="." index="13" instance=ExtResource("3_p076w")]
+position = Vector2(56, 88)
+
+[node name="Obstacle4" parent="." index="14" instance=ExtResource("3_p076w")]
+position = Vector2(104, 88)
+
+[node name="Obstacle5" parent="." index="15" instance=ExtResource("3_p076w")]
+position = Vector2(40, 120)
+
+[node name="tree3" parent="." index="16" instance=ExtResource("5_jdlbs")]
+position = Vector2(112, 104)
+
+[node name="Spikes3" parent="." index="17" instance=ExtResource("6_rljqc")]
+position = Vector2(104, 72)
+
+[node name="Spikes4" parent="." index="18" instance=ExtResource("6_rljqc")]
+position = Vector2(72, 120)
+
+[node name="Spikes" parent="." index="19" instance=ExtResource("6_rljqc")]
+position = Vector2(56, 72)
+start_delay = 1.0
+
+[node name="Spikes2" parent="." index="20" instance=ExtResource("6_rljqc")]
+position = Vector2(88, 120)
+start_delay = 1.0

@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bnbf06tdy2ucn"]
+
+[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://FONTS/VT323-Regular.ttf" id="1_qqjkb"]
+
+[resource]
+font = ExtResource("1_qqjkb")
+font_size = 50

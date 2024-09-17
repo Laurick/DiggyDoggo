@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk2mcwm3ioh7d"
-path="res://.godot/imported/HEROS1bit_Adventurer Hurt D.png-534ecc2b1547789854aa1e7baa97cb1e.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer Hurt D.png-47a2ffc6088aa723833cd8665e8a6b32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer Hurt D.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer Hurt D.png-534ecc2b1547789854aa1e7baa97cb1e.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer Hurt D.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer Hurt D.png-47a2ffc6088aa723833cd8665e8a6b32.ctex"]
 
 [params]
 

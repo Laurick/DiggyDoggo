@@ -1,6 +1,5 @@
-extends Area2D
-
 class_name OpenDoorButton
+extends Area2D
 
 @onready var released_sprite:Sprite2D = $released
 @onready var pushed_sprite:Sprite2D = $pushed

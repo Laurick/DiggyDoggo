@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pwxwdqihxs4d"
-path="res://.godot/imported/HEROS1bit_Princess Idle R.png-b4996ac609d18b7272aaddbf6acd9015.ctex"
+path="res://.godot/imported/HEROS1bit_Princess Idle R.png-ebc94812fc8b5da66fa3fde70dfe752a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Princess Idle R.png"
-dest_files=["res://.godot/imported/HEROS1bit_Princess Idle R.png-b4996ac609d18b7272aaddbf6acd9015.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Princess Idle R.png"
+dest_files=["res://.godot/imported/HEROS1bit_Princess Idle R.png-ebc94812fc8b5da66fa3fde70dfe752a.ctex"]
 
 [params]
 

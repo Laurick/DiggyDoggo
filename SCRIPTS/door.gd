@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name door
+class_name Door
 
 @onready var opened_sprite:Sprite2D = $"door-opened"
 @onready var closed_sprite:Sprite2D = $"door-closed"

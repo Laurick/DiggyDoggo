@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgw1nycar3ix2"]
+
+[ext_resource type="Script" path="res://SCENES/ENEMIES/infinite_trap.gd" id="1_8htgj"]
+[ext_resource type="Texture2D" uid="uid://c3kyc84v5cby2" path="res://TILESET/trap1.tres" id="2_rmltc"]
+[ext_resource type="Script" path="res://SCENES/ENEMIES/damager.gd" id="3_442c6"]
+[ext_resource type="Texture2D" uid="uid://d0godrbi4krfh" path="res://TILESET/trap2.tres" id="3_qsqjs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elm7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qsqjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rmltc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pntkd"]
+size = Vector2(11, 11)
+
+[node name="Spikes" type="Node2D"]
+script = ExtResource("1_8htgj")
+damage_amount = 30
+
+[node name="SpikesSprite" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0.4, 0.435294, 1)
+sprite_frames = SubResource("SpriteFrames_elm7u")
+
+[node name="Area2D" type="Area2D" parent="SpikesSprite"]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("3_442c6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikesSprite/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_pntkd")

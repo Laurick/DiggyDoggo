@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8blnvq2lvjyh"]
+
+[ext_resource type="PackedScene" uid="uid://bkix8aaefcba1" path="res://SCENES/base_room.tscn" id="1_pt6b5"]
+[ext_resource type="PackedScene" uid="uid://cdipbdxiah3gs" path="res://SCENES/PICKABLES/pickable_diamond.tscn" id="2_fscuv"]
+[ext_resource type="PackedScene" uid="uid://dw7p43bbdrxtn" path="res://SCENES/ENEMIES/tiny-circular-saw.tscn" id="3_6bvkm"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="4_dio3t"]
+
+[sub_resource type="Curve2D" id="Curve2D_sanko"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(5.62692, -17.5853, -5.62692, 17.5853, 56, 72, -16.3464, 16.9771, 16.3464, -16.9771, 120, 72, 13.3658, 14.4669, -13.3658, -14.4669, 120, 8, -2.1339, -23.1472, 2.1339, 23.1472, 56, 8, 0.0106592, -15.547, -0.0106592, 15.547, 56, 72)
+}
+point_count = 5
+
+[node name="HomeRoom" instance=ExtResource("1_pt6b5")]
+
+[node name="pickable_diamond" parent="." index="8" instance=ExtResource("2_fscuv")]
+position = Vector2(80, 112)
+
+[node name="Saw" parent="." index="9" instance=ExtResource("3_6bvkm")]
+position = Vector2(40, 32)
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_sanko")
+
+[node name="Obstacle" parent="." index="10" instance=ExtResource("4_dio3t")]
+position = Vector2(24, 24)
+
+[node name="Obstacle2" parent="." index="11" instance=ExtResource("4_dio3t")]
+position = Vector2(24, 136)
+
+[node name="Obstacle3" parent="." index="12" instance=ExtResource("4_dio3t")]
+position = Vector2(136, 136)
+
+[node name="Obstacle4" parent="." index="13" instance=ExtResource("4_dio3t")]
+position = Vector2(136, 24)
+
+[editable path="Saw"]

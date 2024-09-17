@@ -1,0 +1,1056 @@
+[gd_scene load_steps=47 format=3 uid="uid://c8dw883ws3feo"]
+
+[ext_resource type="Script" path="res://SCENES/main.gd" id="1_2qd7t"]
+[ext_resource type="LabelSettings" uid="uid://biy6dc3ggb7bt" path="res://STYLES/InfoStyle2.tres" id="3_o2uax"]
+[ext_resource type="Script" path="res://Components/BlobComponent.gd" id="4_hk75e"]
+[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://FONTS/VT323-Regular.ttf" id="5_1anmc"]
+[ext_resource type="Script" path="res://Components/BlinkComponent.gd" id="5_jf8b6"]
+[ext_resource type="LabelSettings" uid="uid://bnbf06tdy2ucn" path="res://STYLES/LabelStyle.tres" id="7_8u377"]
+[ext_resource type="Script" path="res://Components/UISelectedComponent.gd" id="7_wyv3n"]
+[ext_resource type="Script" path="res://Components/VersionLabel.gd" id="8_0mpi7"]
+[ext_resource type="LabelSettings" uid="uid://ym2ue0h2c7tx" path="res://STYLES/InfoStyle.tres" id="8_e6u00"]
+[ext_resource type="Script" path="res://SCRIPTS/info_label.gd" id="8_mn6ha"]
+[ext_resource type="Script" path="res://SCRIPTS/TimerLabel.gd" id="8_tmdm1"]
+[ext_resource type="PackedScene" uid="uid://o4e1qlyhsm02" path="res://Components/HighscoreArcade.tscn" id="9_lp3jb"]
+[ext_resource type="AudioStream" uid="uid://bk1y86pqnnusl" path="res://AUDIO/pick.wav" id="9_poawx"]
+[ext_resource type="PackedScene" uid="uid://c8n8hberfaafv" path="res://Components/HighscoreTime.tscn" id="10_5veus"]
+[ext_resource type="AudioStream" uid="uid://buok4ap6q45cu" path="res://AUDIO/intro.mp3" id="10_qhcco"]
+[ext_resource type="Texture2D" uid="uid://dasxmuthg2mrd" path="res://SPRITES/ITEMS/animated-moon.png" id="14_gtucn"]
+[ext_resource type="Texture2D" uid="uid://bshmkc5icoodo" path="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Walk D.png" id="15_rltsu"]
+[ext_resource type="AudioStream" uid="uid://bw5p104wtvrqf" path="res://AUDIO/menu.wav" id="16_2jes0"]
+[ext_resource type="Script" path="res://SCRIPTS/SettingsMenu.gd" id="16_qjiut"]
+[ext_resource type="Texture2D" uid="uid://digtl0f3a3dg3" path="res://TILESET/fire0.tres" id="18_fuq8y"]
+[ext_resource type="Texture2D" uid="uid://viir6mjns8q2" path="res://TILESET/fire1.tres" id="19_qii7e"]
+[ext_resource type="Texture2D" uid="uid://qr8lyi1qcy4e" path="res://TILESET/fire2.tres" id="20_jcvmd"]
+[ext_resource type="PackedScene" uid="uid://cle1gyjtf4l1r" path="res://Components/MainShader.tscn" id="20_rbx50"]
+[ext_resource type="Texture2D" uid="uid://c6ulmho1dfor2" path="res://SPRITES/ITEMS/minisaw.png" id="20_uu3js"]
+[ext_resource type="Texture2D" uid="uid://eykisw5icrjy" path="res://TILESET/fire3.tres" id="21_247a5"]
+[ext_resource type="Texture2D" uid="uid://cn8nt3hawd6sk" path="res://TILESET/PixelPackTOPDOWN1BIT.png" id="24_d343d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o0a4"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f817w"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xivo4"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rts56"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emff3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f817w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rts56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oci5g"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0st7i"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpmcb"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkmmq"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6d3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oci5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0st7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpmcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkmmq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_avvwf"]
+resource_name = "Intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-486, 288), Vector2(-486, 288), Vector2(96, 288)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(315, -150), Vector2(315, 150)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(710, 391), Vector2(710, 391), Vector2(253, 391)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ColorRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.53333, 1.63333, 1.73333, 1.83333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PressStart:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Title3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("..")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"intro_play_hit_sound"
+}, {
+"args": [],
+"method": &"intro_play_hit_sound"
+}, {
+"args": [],
+"method": &"intro_play_rock_sound"
+}, {
+"args": [],
+"method": &"intro_play_music"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DELUXE:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_kvyfp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(96, 288)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(315, 150)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(253, 391)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ColorRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PressStart:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Title3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DELUXE:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kti64"]
+_data = {
+"Intro": SubResource("Animation_avvwf"),
+"RESET": SubResource("Animation_kvyfp")
+}
+
+[sub_resource type="Theme" id="Theme_tmb5l"]
+
+[sub_resource type="Theme" id="Theme_oiutu"]
+Button/colors/font_disabled_color = Color(0.768627, 0.760784, 0.0862745, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lw2g0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fuq8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qii7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jcvmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_247a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jcvmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qii7e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipycb"]
+atlas = ExtResource("24_d343d")
+region = Rect2(144, 80, 16, 16)
+
+[sub_resource type="Animation" id="Animation_kmgxo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(315, -77)]
+}
+
+[sub_resource type="Animation" id="Animation_qri5e"]
+resource_name = "player_move"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(197, -77), Vector2(197, 877)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xp8wa"]
+_data = {
+"RESET": SubResource("Animation_kmgxo"),
+"player_move": SubResource("Animation_qri5e")
+}
+
+[node name="CanvasLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2qd7t")
+
+[node name="SplashScreen" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title2" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -112.0
+offset_right = 216.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.768627, 0.760784, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 100
+text = "DIGGY DOGGO"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -9.0
+offset_right = 213.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "Daylight
+Dungeon"
+horizontal_alignment = 2
+
+[node name="Title3" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -44.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+localize_numeral_system = false
+text = "A game by @RothioTome for #IndieSpainJam23
+and modded by Ildesir for Arcade!"
+label_settings = ExtResource("3_o2uax")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="DELUXE" type="Label" parent="SplashScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = 70.0
+offset_right = 288.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.261799
+pivot_offset = Vector2(60, 25)
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 0.4, 0.435294, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 66
+text = "DELUXE
+"
+horizontal_alignment = 2
+
+[node name="BlobComponent" type="Node" parent="SplashScreen/DELUXE" node_paths=PackedStringArray("target")]
+script = ExtResource("4_hk75e")
+target = NodePath("..")
+duration = 0.3
+times_to_blob = -1
+autostart = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="SplashScreen"]
+position = Vector2(315, 150)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_emff3")
+autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SplashScreen"]
+position = Vector2(315, 444)
+scale = Vector2(6.5, 7)
+sprite_frames = SubResource("SpriteFrames_q6d3p")
+autoplay = "default"
+speed_scale = 2.0
+
+[node name="PressStart" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -196.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 0
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.00784314, 0.494118, 0.772549, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 30
+text = "INSERT_COIN"
+label_settings = ExtResource("7_8u377")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkComponent3" type="Node" parent="SplashScreen/PressStart" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+duration = 0.3
+times_to_blink = -1
+autostart = true
+
+[node name="Control" type="Control" parent="SplashScreen"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="SplashScreen/Control"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 676.0
+offset_bottom = 644.0
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="play_time" type="Button" parent="SplashScreen/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "PLAY_TIME_TITLE"
+
+[node name="BlinkComponent2" type="Node" parent="SplashScreen/Control/VBoxContainer/play_time" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SplashScreen/Control/VBoxContainer/play_time"]
+script = ExtResource("7_wyv3n")
+
+[node name="play_arcade" type="Button" parent="SplashScreen/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "PLAY_ARCADE_TITLE"
+
+[node name="BlinkComponent" type="Node" parent="SplashScreen/Control/VBoxContainer/play_arcade" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+
+[node name="UISelectedComponent2" type="AudioStreamPlayer" parent="SplashScreen/Control/VBoxContainer/play_arcade"]
+script = ExtResource("7_wyv3n")
+
+[node name="play_arcade2" type="Button" parent="SplashScreen/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "DEMO"
+
+[node name="BlinkComponent" type="Node" parent="SplashScreen/Control/VBoxContainer/play_arcade2" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+
+[node name="UISelectedComponent2" type="AudioStreamPlayer" parent="SplashScreen/Control/VBoxContainer/play_arcade2"]
+script = ExtResource("7_wyv3n")
+
+[node name="InfoLabel" type="Label" parent="SplashScreen/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = 591.0
+offset_right = 320.0
+offset_bottom = 641.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("8_e6u00")
+horizontal_alignment = 1
+script = ExtResource("8_mn6ha")
+
+[node name="Label" type="Label" parent="SplashScreen/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = 646.0
+offset_right = 320.0
+offset_bottom = 696.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("7_8u377")
+horizontal_alignment = 1
+script = ExtResource("8_tmdm1")
+time = 15
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SplashScreen/Control/Label"]
+stream = ExtResource("9_poawx")
+bus = &"sfx"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SplashScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_kti64")
+}
+autoplay = "Intro"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SplashScreen"]
+stream = ExtResource("10_qhcco")
+bus = &"sfx"
+
+[node name="SettingsMenu" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("16_qjiut")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -356.0
+offset_right = 256.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-48, -44)
+
+[node name="Title" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS_TITLE"
+horizontal_alignment = 1
+
+[node name="Language" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "LANGUAGE_TITLE"
+
+[node name="Languages" type="BoxContainer" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_tmb5l")
+
+[node name="Spanish" type="Button" parent="SettingsMenu/VBoxContainer/Languages"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_right = NodePath("../English")
+focus_next = NodePath("../English")
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_oiutu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "SPANISH_KEY"
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SettingsMenu/VBoxContainer/Languages/Spanish"]
+stream = ExtResource("16_2jes0")
+script = ExtResource("7_wyv3n")
+
+[node name="English" type="Button" parent="SettingsMenu/VBoxContainer/Languages"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_left = NodePath("../Spanish")
+focus_neighbor_bottom = NodePath("../../MusicSlider")
+focus_next = NodePath("../../MusicSlider")
+focus_previous = NodePath("../Spanish")
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_oiutu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "ENGLISH_KEY"
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SettingsMenu/VBoxContainer/Languages/English"]
+stream = ExtResource("16_2jes0")
+script = ExtResource("7_wyv3n")
+
+[node name="music_key" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "MUSIC_KEY"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenu/VBoxContainer"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Languages/English")
+focus_next = NodePath("../SFXSlider")
+focus_previous = NodePath("../Languages/English")
+mouse_default_cursor_shape = 2
+max_value = 10.0
+rounded = true
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SettingsMenu/VBoxContainer/MusicSlider"]
+stream = ExtResource("16_2jes0")
+script = ExtResource("7_wyv3n")
+
+[node name="sfx_key" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "FX_KEY"
+
+[node name="SFXSlider" type="HSlider" parent="SettingsMenu/VBoxContainer"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+layout_mode = 2
+focus_neighbor_top = NodePath("../MusicSlider")
+focus_next = NodePath("../_RothioTome")
+focus_previous = NodePath("../MusicSlider")
+mouse_default_cursor_shape = 2
+max_value = 10.0
+rounded = true
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SettingsMenu/VBoxContainer/SFXSlider"]
+stream = ExtResource("16_2jes0")
+script = ExtResource("7_wyv3n")
+
+[node name="CREDITS" type="Label" parent="SettingsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+autowrap_mode = 3
+
+[node name="_RothioTome" type="LinkButton" parent="SettingsMenu/VBoxContainer"]
+visible = false
+modulate = Color(1, 0.4, 0.435294, 1)
+layout_mode = 2
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_top = NodePath("../SFXSlider")
+focus_next = NodePath("../BackButton")
+focus_previous = NodePath("../SFXSlider")
+focus_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "CONTACT"
+uri = "https://linktr.ee/rothiotome"
+
+[node name="BackButton" type="Button" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_top = NodePath("../_RothioTome")
+focus_previous = NodePath("../_RothioTome")
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "BACK_KEY"
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SettingsMenu/VBoxContainer/BackButton"]
+stream = ExtResource("16_2jes0")
+script = ExtResource("7_wyv3n")
+
+[node name="CleanButton" type="Button" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_top = NodePath("../BackButton")
+focus_previous = NodePath("../_RothioTome")
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "RESET_HIGHSCORES_KEY"
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="SettingsMenu/VBoxContainer/CleanButton"]
+stream = ExtResource("16_2jes0")
+script = ExtResource("7_wyv3n")
+
+[node name="VersionLabel" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+label_settings = ExtResource("7_8u377")
+script = ExtResource("8_0mpi7")
+
+[node name="HighscoreArcade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="HighscoreArcade"]
+modulate = Color(0.67451, 0.67451, 0.67451, 1)
+position = Vector2(315, 401)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_emff3")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(47.8334, 48.0014)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_lw2g0")
+autoplay = "default"
+
+[node name="Sprite2D3" type="Sprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(143, 48)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(240.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D7" type="Sprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(337.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D11" type="Sprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(525.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D9" type="Sprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(432.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="HighscoreArcade"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(590.665, 47.8334)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_lw2g0")
+autoplay = "default"
+
+[node name="HighscoreArcade" parent="HighscoreArcade" instance=ExtResource("9_lp3jb")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HighscoreTime" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="HighscoreTime"]
+modulate = Color(0.67451, 0.67451, 0.67451, 1)
+position = Vector2(315, -77)
+scale = Vector2(6.5, 7)
+sprite_frames = SubResource("SpriteFrames_q6d3p")
+autoplay = "default"
+speed_scale = 2.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="HighscoreTime"]
+modulate = Color(1, 0.4, 0.435294, 1)
+position = Vector2(438, 430)
+scale = Vector2(4, 4)
+texture = ExtResource("20_uu3js")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HighscoreTime"]
+libraries = {
+"": SubResource("AnimationLibrary_xp8wa")
+}
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(47.8334, 48.0014)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_lw2g0")
+autoplay = "default"
+
+[node name="Sprite2D3" type="Sprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(143, 48)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(240.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D7" type="Sprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(337.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D11" type="Sprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(525.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="Sprite2D9" type="Sprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(432.832, 47.832)
+scale = Vector2(6.104, 6.104)
+texture = SubResource("AtlasTexture_ipycb")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="HighscoreTime"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+position = Vector2(590.665, 47.8334)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_lw2g0")
+autoplay = "default"
+
+[node name="HighscoreTime" parent="HighscoreTime" instance=ExtResource("10_5veus")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractionTimer" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[node name="shader" parent="." instance=ExtResource("20_rbx50")]
+layout_mode = 1
+
+[connection signal="focus_entered" from="SplashScreen/Control/VBoxContainer/play_time" to="SplashScreen/Control/InfoLabel" method="_on_play_time_focus_entered"]
+[connection signal="pressed" from="SplashScreen/Control/VBoxContainer/play_time" to="." method="_on_play_time_pressed"]
+[connection signal="focus_entered" from="SplashScreen/Control/VBoxContainer/play_arcade" to="SplashScreen/Control/InfoLabel" method="_on_play_arcade_focus_entered"]
+[connection signal="pressed" from="SplashScreen/Control/VBoxContainer/play_arcade" to="." method="_on_play_arcade_pressed"]
+[connection signal="focus_entered" from="SplashScreen/Control/VBoxContainer/play_arcade2" to="SplashScreen/Control/InfoLabel" method="_on_play_arcade_focus_entered"]
+[connection signal="pressed" from="SplashScreen/Control/VBoxContainer/play_arcade2" to="." method="_on_play_arcade_2_pressed"]
+[connection signal="timeout" from="SplashScreen/Control/Label" to="." method="_on_label_timeout"]
+[connection signal="on_settings_closed" from="SettingsMenu" to="." method="_on_settings_menu_on_settings_closed"]
+[connection signal="visibility_changed" from="SettingsMenu" to="SettingsMenu" method="_on_visibility_changed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/Languages/Spanish" to="SettingsMenu" method="_on_spanish_pressed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/Languages/English" to="SettingsMenu" method="_on_english_pressed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/MusicSlider" to="SettingsMenu" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/SFXSlider" to="SettingsMenu" method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/BackButton" to="SettingsMenu" method="_on_back_button_pressed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/CleanButton" to="." method="_on_clean_button_pressed"]
+[connection signal="timeout" from="InteractionTimer" to="." method="_on_interaction_timer_timeout"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckcnyrs326ryw"
-path="res://.godot/imported/HEROS1bit_Dog Push R.png-ab51be58503c0e5bac66ad9038447117.ctex"
+path="res://.godot/imported/HEROS1bit_Dog Push R.png-68aec226b67ed49d239bf0b0835a1698.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Dog Push R.png"
-dest_files=["res://.godot/imported/HEROS1bit_Dog Push R.png-ab51be58503c0e5bac66ad9038447117.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Push R.png"
+dest_files=["res://.godot/imported/HEROS1bit_Dog Push R.png-68aec226b67ed49d239bf0b0835a1698.ctex"]
 
 [params]
 

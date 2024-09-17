@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv60wohx3i23m"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_v1fm2"]
+[ext_resource type="PackedScene" uid="uid://c77jag8ytsik0" path="res://SCENES/PICKABLES/pickable_wood.tscn" id="2_xid1k"]
+[ext_resource type="PackedScene" uid="uid://bgw1nycar3ix2" path="res://SCENES/ENEMIES/infinite_trap.tscn" id="3_51lq5"]
+
+[node name="HomeRoom" instance=ExtResource("1_v1fm2")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(72, 56)
+
+[node name="pickable_wood" parent="." index="8" instance=ExtResource("2_xid1k")]
+position = Vector2(104, 104)
+
+[node name="Spikes" parent="." index="9" instance=ExtResource("3_51lq5")]
+position = Vector2(40, 40)
+
+[node name="Spikes2" parent="." index="10" instance=ExtResource("3_51lq5")]
+position = Vector2(40, 72)
+
+[node name="Spikes3" parent="." index="11" instance=ExtResource("3_51lq5")]
+position = Vector2(40, 120)
+
+[node name="Spikes4" parent="." index="12" instance=ExtResource("3_51lq5")]
+position = Vector2(56, 88)
+
+[node name="Spikes5" parent="." index="13" instance=ExtResource("3_51lq5")]
+position = Vector2(72, 40)
+
+[node name="Spikes6" parent="." index="14" instance=ExtResource("3_51lq5")]
+position = Vector2(104, 40)
+
+[node name="Spikes7" parent="." index="15" instance=ExtResource("3_51lq5")]
+position = Vector2(120, 56)
+
+[node name="Spikes8" parent="." index="16" instance=ExtResource("3_51lq5")]
+position = Vector2(104, 72)
+
+[node name="Spikes9" parent="." index="17" instance=ExtResource("3_51lq5")]
+position = Vector2(120, 104)
+
+[node name="Spikes10" parent="." index="18" instance=ExtResource("3_51lq5")]
+position = Vector2(88, 88)
+
+[node name="Spikes11" parent="." index="19" instance=ExtResource("3_51lq5")]
+position = Vector2(88, 104)
+
+[node name="Spikes12" parent="." index="20" instance=ExtResource("3_51lq5")]
+position = Vector2(56, 136)
+
+[node name="Spikes13" parent="." index="21" instance=ExtResource("3_51lq5")]
+position = Vector2(104, 120)

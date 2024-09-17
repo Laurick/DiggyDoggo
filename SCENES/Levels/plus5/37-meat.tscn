@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://doq2dh6xktnpa"]
+
+[ext_resource type="PackedScene" uid="uid://deuvww0kfufr" path="res://SCENES/base_room10.tscn" id="1_4nj4r"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_2c4av"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="3_d4veh"]
+[ext_resource type="PackedScene" uid="uid://bgw1nycar3ix2" path="res://SCENES/ENEMIES/infinite_trap.tscn" id="4_j0ma8"]
+[ext_resource type="PackedScene" uid="uid://cvggfb6j7mwyw" path="res://SCENES/OBSTACLES/skull1.tscn" id="5_ltljw"]
+[ext_resource type="PackedScene" uid="uid://dqfwm86egab0c" path="res://SCENES/OBSTACLES/skull2.tscn" id="6_slboa"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="7_avd5h"]
+
+[sub_resource type="Curve2D" id="Curve2D_an2no"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -40, 16, 0, 0, 0, 0, 8, 16, 0, 0, 0, 0, 8, 64, 0, 0, 0, 0, -40, 64, 0, 0, 0, 0, -40, 16)
+}
+point_count = 5
+
+[node name="HomeRoom" instance=ExtResource("1_4nj4r")]
+
+[node name="pickable_food" parent="." index="8" instance=ExtResource("2_2c4av")]
+position = Vector2(80, 80)
+
+[node name="Obstacle" parent="." index="9" instance=ExtResource("3_d4veh")]
+position = Vector2(120, 104)
+
+[node name="Obstacle2" parent="." index="10" instance=ExtResource("3_d4veh")]
+position = Vector2(120, 120)
+
+[node name="Obstacle3" parent="." index="11" instance=ExtResource("3_d4veh")]
+position = Vector2(104, 120)
+
+[node name="Obstacle4" parent="." index="12" instance=ExtResource("3_d4veh")]
+position = Vector2(40, 120)
+
+[node name="Obstacle5" parent="." index="13" instance=ExtResource("3_d4veh")]
+position = Vector2(56, 120)
+
+[node name="Obstacle6" parent="." index="14" instance=ExtResource("3_d4veh")]
+position = Vector2(40, 104)
+
+[node name="Obstacle7" parent="." index="15" instance=ExtResource("3_d4veh")]
+position = Vector2(40, 40)
+
+[node name="Obstacle8" parent="." index="16" instance=ExtResource("3_d4veh")]
+position = Vector2(40, 56)
+
+[node name="Obstacle9" parent="." index="17" instance=ExtResource("3_d4veh")]
+position = Vector2(56, 40)
+
+[node name="Obstacle10" parent="." index="18" instance=ExtResource("3_d4veh")]
+position = Vector2(104, 40)
+
+[node name="Obstacle11" parent="." index="19" instance=ExtResource("3_d4veh")]
+position = Vector2(120, 56)
+
+[node name="Obstacle12" parent="." index="20" instance=ExtResource("3_d4veh")]
+position = Vector2(120, 40)
+
+[node name="Spikes" parent="." index="21" instance=ExtResource("4_j0ma8")]
+position = Vector2(72, 112)
+start_delay = 1.0
+
+[node name="Spikes2" parent="." index="22" instance=ExtResource("4_j0ma8")]
+position = Vector2(88, 112)
+start_delay = 1.0
+
+[node name="Spikes3" parent="." index="23" instance=ExtResource("4_j0ma8")]
+position = Vector2(72, 48)
+start_delay = 1.0
+
+[node name="Spikes4" parent="." index="24" instance=ExtResource("4_j0ma8")]
+position = Vector2(88, 48)
+start_delay = 1.0
+
+[node name="Spikes5" parent="." index="25" instance=ExtResource("4_j0ma8")]
+position = Vector2(48, 72)
+
+[node name="Spikes6" parent="." index="26" instance=ExtResource("4_j0ma8")]
+position = Vector2(48, 88)
+
+[node name="Spikes7" parent="." index="27" instance=ExtResource("4_j0ma8")]
+position = Vector2(112, 72)
+
+[node name="Spikes8" parent="." index="28" instance=ExtResource("4_j0ma8")]
+position = Vector2(112, 88)
+
+[node name="tree" parent="." index="29" instance=ExtResource("5_ltljw")]
+position = Vector2(56, 96)
+
+[node name="tree2" parent="." index="30" instance=ExtResource("6_slboa")]
+position = Vector2(96, 88)
+
+[node name="Saw" parent="." index="31" instance=ExtResource("7_avd5h")]
+position = Vector2(96, 40)
+movement_speed = 0.2
+rotation_speed = 600.0
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_an2no")
+
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(-40, 16)
+
+[editable path="Saw"]

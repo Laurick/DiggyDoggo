@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://c52xmds3isads"]
+
+[ext_resource type="PackedScene" uid="uid://deuvww0kfufr" path="res://SCENES/base_room10.tscn" id="1_rbtfc"]
+[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://SCENES/PICKABLES/pickable_shovel.tscn" id="2_s3aw0"]
+[ext_resource type="PackedScene" uid="uid://cvggfb6j7mwyw" path="res://SCENES/OBSTACLES/skull1.tscn" id="3_wvije"]
+[ext_resource type="PackedScene" uid="uid://dqfwm86egab0c" path="res://SCENES/OBSTACLES/skull2.tscn" id="4_xy0ss"]
+[ext_resource type="PackedScene" uid="uid://bgw1nycar3ix2" path="res://SCENES/ENEMIES/infinite_trap.tscn" id="5_udbxd"]
+
+[node name="HomeRoom" instance=ExtResource("1_rbtfc")]
+
+[node name="pickable_shovel" parent="." index="8" instance=ExtResource("2_s3aw0")]
+position = Vector2(24, 24)
+
+[node name="tree" parent="." index="9" instance=ExtResource("3_wvije")]
+position = Vector2(56, 120)
+
+[node name="tree2" parent="." index="10" instance=ExtResource("4_xy0ss")]
+position = Vector2(112, 88)
+
+[node name="Spikes" parent="." index="11" instance=ExtResource("5_udbxd")]
+position = Vector2(56, 104)
+
+[node name="Spikes4" parent="." index="12" instance=ExtResource("5_udbxd")]
+position = Vector2(96, 64)
+
+[node name="Spikes3" parent="." index="13" instance=ExtResource("5_udbxd")]
+position = Vector2(72, 120)
+
+[node name="Spikes2" parent="." index="14" instance=ExtResource("5_udbxd")]
+position = Vector2(112, 80)
+
+[node name="Spikes5" parent="." index="15" instance=ExtResource("5_udbxd")]
+position = Vector2(88, 104)
+
+[node name="Spikes6" parent="." index="16" instance=ExtResource("5_udbxd")]
+position = Vector2(24, 40)
+
+[node name="Spikes7" parent="." index="17" instance=ExtResource("5_udbxd")]
+position = Vector2(40, 24)
+
+[node name="Spikes8" parent="." index="18" instance=ExtResource("5_udbxd")]
+position = Vector2(120, 24)
+
+[node name="Spikes9" parent="." index="19" instance=ExtResource("5_udbxd")]
+position = Vector2(136, 56)
+
+[node name="Spikes10" parent="." index="20" instance=ExtResource("5_udbxd")]
+position = Vector2(120, 136)
+
+[node name="Spikes11" parent="." index="21" instance=ExtResource("5_udbxd")]
+position = Vector2(24, 120)

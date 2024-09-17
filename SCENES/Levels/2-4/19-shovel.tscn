@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://nhfv1xmjcrgp"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_tqnf6"]
+[ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://SCENES/ENEMIES/saw.tscn" id="2_x7d1p"]
+[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://SCENES/PICKABLES/pickable_shovel.tscn" id="3_wrqp4"]
+[ext_resource type="PackedScene" uid="uid://dql7kqrf20e71" path="res://SCENES/OBSTACLES/big_tree.tscn" id="4_6uf7c"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="5_tlp0k"]
+
+[sub_resource type="Curve2D" id="Curve2D_ut74r"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 88, 0, 0, 0, 0, 75.9998, 88.0002, 0, 0, 0, 0, 0, 88)
+}
+point_count = 3
+
+[node name="HomeRoom" instance=ExtResource("1_tqnf6")]
+
+[node name="pickable_shovel" parent="." index="8" instance=ExtResource("3_wrqp4")]
+position = Vector2(112, 120)
+
+[node name="Saw" parent="." index="9" instance=ExtResource("2_x7d1p")]
+z_index = 1
+position = Vector2(112, 139)
+rotation = 3.14159
+movement_speed = 1.0
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_ut74r")
+
+[node name="Saw2" parent="." index="10" instance=ExtResource("2_x7d1p")]
+position = Vector2(39, 19)
+movement_speed = 1.0
+
+[node name="Path2D" parent="Saw2" index="0"]
+curve = SubResource("Curve2D_ut74r")
+
+[node name="tree" parent="." index="11" instance=ExtResource("4_6uf7c")]
+position = Vector2(39, 63)
+
+[node name="tree2" parent="." index="12" instance=ExtResource("4_6uf7c")]
+position = Vector2(120, 63)
+
+[node name="tree3" parent="." index="13" instance=ExtResource("5_tlp0k")]
+position = Vector2(56, 88)
+
+[editable path="Saw"]
+[editable path="Saw2"]

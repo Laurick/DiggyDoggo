@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvggfb6j7mwyw"]
+
+[ext_resource type="Texture2D" uid="uid://3sy541hur1hg" path="res://TILESET/skull1.tres" id="1_ujqdf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls8kg"]
+size = Vector2(16, 8)
+
+[node name="tree" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_ls8kg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ujqdf")

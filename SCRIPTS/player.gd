@@ -1,49 +1,53 @@
 class_name Player
-
 extends CharacterBody2D
 
-signal on_pick_object 
-signal on_hurt
-signal on_action_area_entered
 
-@export var velocity_multiplier:= 600.0
+@export var velocity_multiplier:float = 600.0
 
 @onready var effects_anim = $Effects
 @onready var invulnerability_timer:Timer = $InvulnerabilityTimer
 @onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite
 
-@onready var ui: PlayerUI = $UI
+@onready var ui:PlayerUI = $UI
 
 var current_zone:action_zone = null
 
-var can_move: bool = true
-var is_invulnerable: bool = false
-var is_hurting :bool = false
+signal on_pick_object 
+signal on_hurt
+signal on_action_area_entered
 
-var is_dead: bool = false
+var can_move:bool = true
+var is_invulnerable:bool = false
+var is_hurting:bool = false
+
+var is_dead:bool = false
+var file:FileInputStream
+
+func _ready() -> void:
+	file = FileInputStream.new()
+	#file.open_file_to_write("input")
+	file.open_file_to_read("input")
 
 func _physics_process(_delta):
 	if is_dead: return
-	if Globals.is_splash_screen_open: return
-	get_input()
-	if not can_move: velocity = Vector2.ZERO
+	if Globals.game_mode == Globals.GAME_MODE.demo:
+		#var a = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		#file.write(a)
+		#get_input(a)
+		var a = file.read()
+		if a != null:
+			get_input(a)
+	else:
+		get_input(Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down"))
+	if !can_move: velocity = Vector2.ZERO
 	move_and_slide()
-	animate()
+	walk()
 
-
-func get_input():
-	
-	if Globals.is_splash_screen_open: return
-	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+func get_input(input_direction:Vector2):
 	velocity = input_direction * velocity_multiplier
 	
 	if Input.is_action_just_pressed("ui_accept"): try_to_action()
-
-
-func animate():
-	walk()
-	#roll()
 
 
 func walk():
@@ -67,7 +71,6 @@ func walk():
 				"walk_R": anim.play("idle_R")
 				"walk_U": anim.play("idle_U")
 				"walk_D": anim.play("idle_D")
-
 
 func roll():
 	if velocity != Vector2.ZERO: 
@@ -96,7 +99,7 @@ func frame_freeze(duration):
 	await get_tree().create_timer(duration, true, false, true).timeout
 	Engine.time_scale = 1
 
-	
+
 func restore_movement():
 	can_move = true
 
@@ -116,15 +119,16 @@ func try_to_action():
 	if get_parent().message_is_open:return
 	match current_zone.type:
 		action_zone.zone_type.sleep:
-			if Globals.has_item(Pickable.resource_type.wood) && Globals.has_item(Pickable.resource_type.food):
+			if Globals.has_item(Pickable.ResourceType.wood) && Globals.has_item(Pickable.ResourceType.food):
 				get_parent().sleep(current_zone)
 				hide()
 		action_zone.zone_type.dig:
-			if Globals.has_item(Pickable.resource_type.shovel):
+			if Globals.has_item(Pickable.ResourceType.shovel):
 				get_parent().dig(current_zone)
 
 
 func kill():
+	file.close_file()
 	is_dead = true
 	is_invulnerable = true
 	anim.play("death_D")

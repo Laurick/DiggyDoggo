@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0j72rjcrohys"
-path="res://.godot/imported/HEROS1bit_Adventurer Push R.png-c367ebe742cd0a0b5124fa5168d4f1f3.ctex"
+path="res://.godot/imported/HEROS1bit_Adventurer Push R.png-528b42e77eedb6feefc09ad3c318ca74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Adventurer Push R.png"
-dest_files=["res://.godot/imported/HEROS1bit_Adventurer Push R.png-c367ebe742cd0a0b5124fa5168d4f1f3.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Adventurer Push R.png"
+dest_files=["res://.godot/imported/HEROS1bit_Adventurer Push R.png-528b42e77eedb6feefc09ad3c318ca74.ctex"]
 
 [params]
 

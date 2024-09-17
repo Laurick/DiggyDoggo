@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uqygqo5l3pd6"
-path="res://.godot/imported/HEROS1bit_Dog Idle U.png-ca15716511d4e3b86b13fcea301638db.ctex"
+path="res://.godot/imported/HEROS1bit_Dog Idle U.png-e22fbcd5ead89fb8b08a4aa7912a1a8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Dog Idle U.png"
-dest_files=["res://.godot/imported/HEROS1bit_Dog Idle U.png-ca15716511d4e3b86b13fcea301638db.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Dog Idle U.png"
+dest_files=["res://.godot/imported/HEROS1bit_Dog Idle U.png-e22fbcd5ead89fb8b08a4aa7912a1a8c.ctex"]
 
 [params]
 

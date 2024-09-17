@@ -5,6 +5,7 @@ var rooms:Array = []
 var generation_chance:int = 20
 
 func generate(room_seed):
+	rooms.clear()
 	if rooms.is_empty(): preload_all_scenes()
 	seed(room_seed)
 
@@ -14,8 +15,6 @@ func generate(room_seed):
 		for i in dungeon.keys():
 			dungeon.get(i).queue_free()
 		randomize()
-		var sed = room_seed * randi_range(-1,1) + randi_range(-100,100)
-		print(sed)
 		dungeon = generate_dungeon(len(rooms))
 	return dungeon
 
@@ -69,19 +68,32 @@ func generate_dungeon(size:int) -> Dictionary:
 
 func instantiate_new_room(index:int) -> Node2D:
 	return rooms[index].instantiate()
-	
+
+func get_theme_by_level(level:int):
+	match level:
+		1:
+			return "1"
+		2,3,4:
+			return "2-4"
+		_:
+			return "plus5"
+
 func preload_all_scenes():
-	var directory_path = "res://Scenes/Levels/"
+	var directory_path = "res://SCENES/Levels/"+get_theme_by_level(Globals.level)+"/"
 	var dir = DirAccess.open(directory_path)
-	
+	rooms.clear()
 	if dir:
+		rooms.append(load("res://SCENES/Levels/00-home_room.tscn"))
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
 			if (file_name.ends_with(".remap")):
 				file_name = file_name.replace(".remap","")
-			rooms.append(load(directory_path+file_name))
-			print("Found file: " + file_name)
+			if Globals.game_mode == Globals.GAME_MODE.time:
+				if !(file_name.contains("coin") or file_name.contains("diamond")):
+					rooms.append(load(directory_path+file_name))
+			else:
+				rooms.append(load(directory_path+file_name))
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to access the path.")

@@ -1,0 +1,452 @@
+[gd_scene load_steps=23 format=3 uid="uid://c8dw883ws3feo"]
+
+[ext_resource type="Script" path="res://SCENES/main.gd" id="1_2qd7t"]
+[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://FONTS/VT323-Regular.ttf" id="5_1anmc"]
+[ext_resource type="Script" path="res://Components/BlinkComponent.gd" id="5_jf8b6"]
+[ext_resource type="LabelSettings" uid="uid://bnbf06tdy2ucn" path="res://STYLES/LabelStyle.tres" id="7_8u377"]
+[ext_resource type="Script" path="res://Components/VersionLabel.gd" id="8_0mpi7"]
+[ext_resource type="PackedScene" uid="uid://o4e1qlyhsm02" path="res://Components/HighscoreArcade.tscn" id="9_lp3jb"]
+[ext_resource type="PackedScene" uid="uid://c8n8hberfaafv" path="res://Components/HighscoreTime.tscn" id="10_5veus"]
+[ext_resource type="Texture2D" uid="uid://dasxmuthg2mrd" path="res://SPRITES/ITEMS/animated-moon.png" id="14_gtucn"]
+[ext_resource type="Texture2D" uid="uid://bshmkc5icoodo" path="res://SPRITES/HEROS/spritesheets/HEROS1bit_Dog Walk D.png" id="15_rltsu"]
+[ext_resource type="Script" path="res://SCRIPTS/SettingsMenu.gd" id="16_qjiut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o0a4"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f817w"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xivo4"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rts56"]
+atlas = ExtResource("14_gtucn")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emff3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f817w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rts56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xivo4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oci5g"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0st7i"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpmcb"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkmmq"]
+atlas = ExtResource("15_rltsu")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6d3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oci5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0st7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpmcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkmmq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_tmb5l"]
+
+[sub_resource type="Theme" id="Theme_oiutu"]
+Button/colors/font_disabled_color = Color(0.768627, 0.760784, 0.0862745, 1)
+
+[node name="CanvasLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2qd7t")
+
+[node name="SplashScreen" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title2" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -112.0
+offset_right = 216.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.768627, 0.760784, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 100
+text = "DIGGY DOGGO"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -9.0
+offset_right = 213.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "Daylight
+Dungeon"
+horizontal_alignment = 2
+
+[node name="Title3" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -44.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.00784314, 0.494118, 0.772549, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 30
+text = "A game by @RothioTome for #IndieSpainJam23"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="SplashScreen"]
+position = Vector2(315, 150)
+scale = Vector2(6.10417, 6.10417)
+sprite_frames = SubResource("SpriteFrames_emff3")
+autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SplashScreen"]
+position = Vector2(315, 444)
+scale = Vector2(6.5, 7)
+sprite_frames = SubResource("SpriteFrames_q6d3p")
+autoplay = "default"
+speed_scale = 2.0
+
+[node name="PressStart" type="Label" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -44.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.00784314, 0.494118, 0.772549, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 30
+text = "Insert coin to join"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkComponent3" type="Node" parent="SplashScreen/PressStart" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplashScreen"]
+visible = false
+layout_mode = 0
+offset_left = 240.0
+offset_top = 540.0
+offset_right = 528.0
+offset_bottom = 684.0
+
+[node name="play_time" type="Button" parent="SplashScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "PLAY_TIME_TITLE"
+alignment = 2
+
+[node name="BlinkComponent2" type="Node" parent="SplashScreen/VBoxContainer/play_time" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+
+[node name="play_arcade" type="Button" parent="SplashScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "PLAY_ARCADE_TITLE"
+alignment = 2
+
+[node name="BlinkComponent" type="Node" parent="SplashScreen/VBoxContainer/play_arcade" node_paths=PackedStringArray("target")]
+script = ExtResource("5_jf8b6")
+target = NodePath("..")
+
+[node name="SettingsMenu" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("16_qjiut")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -356.0
+offset_right = 256.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-48, -44)
+
+[node name="Title" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS_TITLE"
+horizontal_alignment = 1
+
+[node name="Language" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "LANGUAGE_TITLE"
+
+[node name="Languages" type="BoxContainer" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_tmb5l")
+
+[node name="Spanish" type="Button" parent="SettingsMenu/VBoxContainer/Languages"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_right = NodePath("../English")
+focus_next = NodePath("../English")
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_oiutu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "SPANISH_KEY"
+
+[node name="English" type="Button" parent="SettingsMenu/VBoxContainer/Languages"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_left = NodePath("../Spanish")
+focus_neighbor_bottom = NodePath("../../MusicSlider")
+focus_next = NodePath("../../MusicSlider")
+focus_previous = NodePath("../Spanish")
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_oiutu")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "ENGLISH_KEY"
+
+[node name="music_key" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "MUSIC_KEY"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenu/VBoxContainer"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Languages/English")
+focus_next = NodePath("../SFXSlider")
+focus_previous = NodePath("../Languages/English")
+mouse_default_cursor_shape = 2
+max_value = 10.0
+rounded = true
+
+[node name="sfx_key" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "FX_KEY"
+
+[node name="SFXSlider" type="HSlider" parent="SettingsMenu/VBoxContainer"]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
+layout_mode = 2
+focus_neighbor_top = NodePath("../MusicSlider")
+focus_next = NodePath("../_RothioTome")
+focus_previous = NodePath("../MusicSlider")
+mouse_default_cursor_shape = 2
+max_value = 10.0
+rounded = true
+
+[node name="CREDITS" type="Label" parent="SettingsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+autowrap_mode = 3
+
+[node name="_RothioTome" type="LinkButton" parent="SettingsMenu/VBoxContainer"]
+visible = false
+modulate = Color(1, 0.4, 0.435294, 1)
+layout_mode = 2
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_top = NodePath("../SFXSlider")
+focus_next = NodePath("../BackButton")
+focus_previous = NodePath("../SFXSlider")
+focus_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "CONTACT"
+uri = "https://linktr.ee/rothiotome"
+
+[node name="BackButton" type="Button" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+localize_numeral_system = false
+focus_neighbor_top = NodePath("../_RothioTome")
+focus_previous = NodePath("../_RothioTome")
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_1anmc")
+theme_override_font_sizes/font_size = 50
+text = "BACK_KEY"
+
+[node name="VersionLabel" type="Label" parent="SettingsMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+label_settings = ExtResource("7_8u377")
+script = ExtResource("8_0mpi7")
+
+[node name="HighscoreArcade" parent="." instance=ExtResource("9_lp3jb")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 528.0
+offset_bottom = 724.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="HighscoreTime" parent="." instance=ExtResource("10_5veus")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 528.0
+offset_bottom = 724.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="InteractionTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="visibility_changed" from="SettingsMenu" to="SettingsMenu" method="_on_visibility_changed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/Languages/Spanish" to="SettingsMenu" method="_on_spanish_pressed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/Languages/English" to="SettingsMenu" method="_on_english_pressed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/MusicSlider" to="SettingsMenu" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/VBoxContainer/SFXSlider" to="SettingsMenu" method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/BackButton" to="SettingsMenu" method="_on_back_button_pressed"]
+[connection signal="timeout" from="InteractionTimer" to="." method="_on_interaction_timer_timeout"]

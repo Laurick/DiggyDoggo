@@ -1,26 +1,23 @@
-[gd_scene load_steps=49 format=3 uid="uid://c7mud6d2ljjvj"]
+[gd_scene load_steps=29 format=3 uid="uid://c7mud6d2ljjvj"]
 
-[ext_resource type="Script" path="res://Scripts/game-manager.gd" id="1_4nufx"]
-[ext_resource type="PackedScene" uid="uid://de0pmnn81f0e" path="res://Scenes/player.tscn" id="2_fowwk"]
-[ext_resource type="Script" path="res://Scripts/camera.gd" id="3_4i2mk"]
-[ext_resource type="Script" path="res://Scripts/canvas-controller.gd" id="4_3wit5"]
-[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://Fonts/VT323-Regular.ttf" id="4_7g5vk"]
-[ext_resource type="Shader" path="res://Shaders/crt.gdshader" id="4_y3sf8"]
-[ext_resource type="Texture2D" uid="uid://bu6wqmxaqbpea" path="res://Sprites/Items/sun.png" id="5_87rmp"]
-[ext_resource type="Texture2D" uid="uid://duoofrnk02de2" path="res://Sprites/Items/moon.png" id="6_fkbis"]
-[ext_resource type="Texture2D" uid="uid://cpg45fx4e66k8" path="res://Sprites/Items/item1BIT_shovel.png" id="7_rd8xl"]
-[ext_resource type="Texture2D" uid="uid://dtb7xq3hesl66" path="res://Tileset/meat.png" id="8_i5qe8"]
-[ext_resource type="Texture2D" uid="uid://btfm6nyxsa1x6" path="res://Tileset/up_arrow.tres" id="8_opk5w"]
-[ext_resource type="Texture2D" uid="uid://dy6bwpjkn3slj" path="res://Sprites/Items/wood.png" id="9_3g3jg"]
-[ext_resource type="Script" path="res://Scripts/message_panel.gd" id="12_y1iib"]
-[ext_resource type="Texture2D" uid="uid://vlnnqf5hpd5t" path="res://Tileset/action.tres" id="13_1y4k6"]
-[ext_resource type="Script" path="res://Scripts/SettingsMenu.gd" id="14_64n3d"]
-[ext_resource type="Script" path="res://Scripts/music_manager.gd" id="15_652dt"]
-[ext_resource type="Texture2D" uid="uid://dasxmuthg2mrd" path="res://Sprites/Items/animated-moon.png" id="15_bw071"]
-[ext_resource type="Texture2D" uid="uid://bshmkc5icoodo" path="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Dog Walk D.png" id="15_q4jb7"]
-[ext_resource type="Texture2D" uid="uid://cmyle567bt7wx" path="res://Sprites/Items/bigsaw.png" id="16_3deiw"]
-[ext_resource type="Script" path="res://Scripts/rotation-saw.gd" id="17_wkdb2"]
-[ext_resource type="Texture2D" uid="uid://2pg62wan1crs" path="res://Tileset/grabber.tres" id="19_8xsk3"]
+[ext_resource type="Script" path="res://SCRIPTS/game-manager.gd" id="1_4nufx"]
+[ext_resource type="PackedScene" uid="uid://de0pmnn81f0e" path="res://SCENES/player.tscn" id="2_fowwk"]
+[ext_resource type="Script" path="res://SCRIPTS/camera.gd" id="3_4i2mk"]
+[ext_resource type="Script" path="res://SCRIPTS/canvas-controller.gd" id="4_3wit5"]
+[ext_resource type="FontFile" uid="uid://bk8b0qsjfd1xy" path="res://FONTS/VT323-Regular.ttf" id="4_7g5vk"]
+[ext_resource type="Texture2D" uid="uid://bu6wqmxaqbpea" path="res://SPRITES/ITEMS/sun.png" id="5_87rmp"]
+[ext_resource type="Script" path="res://Components/LetterToLetterComponent.gd" id="6_erjes"]
+[ext_resource type="Texture2D" uid="uid://duoofrnk02de2" path="res://SPRITES/ITEMS/moon.png" id="6_fkbis"]
+[ext_resource type="Texture2D" uid="uid://cpg45fx4e66k8" path="res://SPRITES/ITEMS/item1BIT_shovel.png" id="7_rd8xl"]
+[ext_resource type="Texture2D" uid="uid://dtb7xq3hesl66" path="res://TILESET/meat.png" id="8_i5qe8"]
+[ext_resource type="Texture2D" uid="uid://btfm6nyxsa1x6" path="res://TILESET/up_arrow.tres" id="8_opk5w"]
+[ext_resource type="Texture2D" uid="uid://dy6bwpjkn3slj" path="res://SPRITES/ITEMS/wood.png" id="9_3g3jg"]
+[ext_resource type="Script" path="res://SCRIPTS/message_panel.gd" id="12_y1iib"]
+[ext_resource type="Texture2D" uid="uid://vlnnqf5hpd5t" path="res://TILESET/action.tres" id="13_1y4k6"]
+[ext_resource type="PackedScene" uid="uid://cle1gyjtf4l1r" path="res://Components/MainShader.tscn" id="14_8leg2"]
+[ext_resource type="PackedScene" uid="uid://caunx45xfgnun" path="res://Components/LetterButton.tscn" id="15_deckw"]
+[ext_resource type="Script" path="res://Components/BlinkComponent.gd" id="16_f7824"]
+[ext_resource type="Script" path="res://Components/UISelectedComponent.gd" id="17_hgcwo"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_aqw0e"]
 color = Color(0, 0, 0, 0)
@@ -54,42 +51,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../shader:material:shader_parameter/bottomStaticOpt")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../../shader:material:shader_parameter/horzFuzzOpt")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.2]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../shader:material:shader_parameter/curveIntensityD")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
 
 [sub_resource type="Animation" id="Animation_ns34o"]
 resource_name = "flash"
@@ -118,42 +79,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../shader:material:shader_parameter/bottomStaticOpt")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.15, 0.0, 0.2]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../../shader:material:shader_parameter/horzFuzzOpt")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.8, 0.2]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../shader:material:shader_parameter/curveIntensityD")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.95, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uj531"]
@@ -212,231 +137,11 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 0.432071, 0.465479, 1, 1, 0.4, 0.435294
 offsets = PackedFloat32Array(0, 0.240535, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.46043, 0.90438, 0.166741, 1, 0.380392, 0.890196, 0.0431373, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3o0a4"]
-atlas = ExtResource("15_bw071")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f817w"]
-atlas = ExtResource("15_bw071")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xivo4"]
-atlas = ExtResource("15_bw071")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rts56"]
-atlas = ExtResource("15_bw071")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_emff3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3o0a4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f817w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xivo4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3o0a4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xivo4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rts56")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xivo4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xivo4")
-}],
-"loop": true,
-"name": &"default",
-"speed": 0.5
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oci5g"]
-atlas = ExtResource("15_q4jb7")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0st7i"]
-atlas = ExtResource("15_q4jb7")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xpmcb"]
-atlas = ExtResource("15_q4jb7")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wkmmq"]
-atlas = ExtResource("15_q4jb7")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_q6d3p"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oci5g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0st7i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xpmcb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wkmmq")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="Theme" id="Theme_tmb5l"]
-
-[sub_resource type="Theme" id="Theme_oiutu"]
-Button/colors/font_disabled_color = Color(0.768627, 0.760784, 0.0862745, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_y0w7u"]
-shader = ExtResource("4_y3sf8")
-shader_parameter/vertJerkOpt = 0.0
-shader_parameter/vertMovementOpt = 0.0
-shader_parameter/bottomStaticOpt = 0.0
-shader_parameter/bottomStaticStrenth = 0.0
-shader_parameter/scalinesOpt = 2.0
-shader_parameter/rgbOffsetOpt = 0.3
-shader_parameter/horzFuzzOpt = 0.2
-shader_parameter/curveIntensityA = 5.0
-shader_parameter/curveIntensityB = 2.0
-shader_parameter/curveIntensityC = 0.5
-shader_parameter/curveIntensityD = 1.0
-
-[sub_resource type="Animation" id="Animation_c7fxv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/FadeCanvas-top:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(648, 300)]
-}
-
-[sub_resource type="Animation" id="Animation_6cj2h"]
-resource_name = "fade_out"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/FadeCanvas-top:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(650, 300), Vector2(0, 300), Vector2(0, 300)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/FadeCanvas-mid:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(650, 300), Vector2(0, 300), Vector2(0, 300)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/FadeCanvas-bottom:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(650, 300), Vector2(0, 300), Vector2(0, 300)]
-}
-
-[sub_resource type="Animation" id="Animation_ndefu"]
-resource_name = "fade_in"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/FadeCanvas-top:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 300), Vector2(0, 300), Vector2(650, 300)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/FadeCanvas-mid:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 300), Vector2(0, 300), Vector2(650, 300)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/FadeCanvas-bottom:size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 300), Vector2(0, 300), Vector2(650, 300)]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"fade_out_ended"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3lwfk"]
-_data = {
-"RESET": SubResource("Animation_c7fxv"),
-"fade_in": SubResource("Animation_6cj2h"),
-"fade_out": SubResource("Animation_ndefu")
-}
-
 [node name="World" type="Node2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_4nufx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-unique_name_in_owner = true
 offset = Vector2(0, -160)
 anchor_mode = 0
 script = ExtResource("3_4i2mk")
@@ -452,54 +157,12 @@ velocity_multiplier = 500.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("4_3wit5")
 
-[node name="FadeCanvas-top" type="ColorRect" parent="CanvasLayer"]
-offset_right = 648.0
-offset_bottom = 300.0
-auto_translate = false
-localize_numeral_system = false
-mouse_force_pass_scroll_events = false
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="FadeCanvas-mid" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 3205.0
-offset_top = 1900.0
-offset_right = 3855.0
-offset_bottom = 2200.0
-grow_horizontal = 0
-grow_vertical = 2
-rotation = -3.14159
-pivot_offset = Vector2(6.10352e-05, 150)
-auto_translate = false
-localize_numeral_system = false
-mouse_force_pass_scroll_events = false
-color = Color(0, 0, 0, 1)
-
-[node name="FadeCanvas-bottom" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = 3800.0
-offset_right = 650.0
-offset_bottom = 4100.0
-grow_vertical = 0
-auto_translate = false
-localize_numeral_system = false
-mouse_force_pass_scroll_events = false
-color = Color(0, 0, 0, 1)
-
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 160.0
 grow_horizontal = 2
 color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="ResourcesTitle" type="Label" parent="CanvasLayer/ColorRect"]
 layout_mode = 0
@@ -512,7 +175,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_7g5vk")
 theme_override_font_sizes/font_size = 50
 text = "RESOURCES_KEY"
-metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="CanvasLayer/ColorRect"]
 layout_mode = 0
@@ -525,7 +187,73 @@ theme_override_fonts/font = ExtResource("4_7g5vk")
 theme_override_font_sizes/font_size = 50
 text = "07:00 am"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+
+[node name="Demo" type="Label" parent="CanvasLayer/ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 68.0
+offset_right = 90.0
+offset_bottom = 121.0
+grow_horizontal = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_7g5vk")
+theme_override_font_sizes/font_size = 50
+text = "DEMO
+"
+horizontal_alignment = 1
+
+[node name="LetterToLetterComponent" type="Node" parent="CanvasLayer/ColorRect/Demo"]
+script = ExtResource("6_erjes")
+time_between_letters = 0.5
+autostart = true
+
+[node name="ControlScore" type="Control" parent="CanvasLayer/ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreTitle" type="Label" parent="CanvasLayer/ColorRect/ControlScore"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 7.0
+offset_right = 90.0
+offset_bottom = 60.0
+grow_horizontal = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_7g5vk")
+theme_override_font_sizes/font_size = 50
+text = "SCORE_KEY"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="CanvasLayer/ColorRect/ControlScore"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 68.0
+offset_right = 90.0
+offset_bottom = 121.0
+grow_horizontal = 2
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_7g5vk")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="CanvasLayer/ColorRect"]
 anchors_preset = 0
@@ -533,14 +261,12 @@ offset_left = 448.0
 offset_top = 65.0
 offset_right = 488.0
 offset_bottom = 105.0
-metadata/_edit_use_anchors_ = true
 
 [node name="SunSprite" type="TextureRect" parent="CanvasLayer/ColorRect/Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_87rmp")
-metadata/_edit_use_anchors_ = true
 
 [node name="MoonSprite" type="TextureRect" parent="CanvasLayer/ColorRect/Control"]
 layout_mode = 0
@@ -548,7 +274,6 @@ offset_left = 128.0
 offset_right = 168.0
 offset_bottom = 40.0
 texture = ExtResource("6_fkbis")
-metadata/_edit_use_anchors_ = true
 
 [node name="ProgressBar" type="HSlider" parent="CanvasLayer/ColorRect/Control"]
 layout_mode = 0
@@ -557,11 +282,8 @@ offset_right = 81.0
 offset_bottom = 62.0
 scale = Vector2(2, 2)
 theme_override_icons/grabber = ExtResource("8_opk5w")
-theme_override_icons/grabber_highlight = ExtResource("8_opk5w")
-theme_override_icons/grabber_disabled = ExtResource("8_opk5w")
 theme_override_styles/slider = SubResource("StyleBoxLine_aqw0e")
 scrollable = false
-metadata/_edit_use_anchors_ = true
 
 [node name="shovel_parent" type="Control" parent="CanvasLayer/ColorRect"]
 anchors_preset = 0
@@ -569,7 +291,6 @@ offset_left = 166.0
 offset_top = 72.0
 offset_right = 206.0
 offset_bottom = 112.0
-metadata/_edit_use_anchors_ = true
 
 [node name="shovel" type="TextureRect" parent="CanvasLayer/ColorRect/shovel_parent"]
 modulate = Color(1, 1, 1, 0.2)
@@ -577,7 +298,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("7_rd8xl")
-metadata/_edit_use_anchors_ = true
 
 [node name="wood_parent" type="Control" parent="CanvasLayer/ColorRect"]
 anchors_preset = 0
@@ -585,7 +305,6 @@ offset_left = 102.0
 offset_top = 72.0
 offset_right = 142.0
 offset_bottom = 112.0
-metadata/_edit_use_anchors_ = true
 
 [node name="wood" type="TextureRect" parent="CanvasLayer/ColorRect/wood_parent"]
 modulate = Color(1, 1, 1, 0.2)
@@ -593,7 +312,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("9_3g3jg")
-metadata/_edit_use_anchors_ = true
 
 [node name="food_parent" type="Control" parent="CanvasLayer/ColorRect"]
 anchors_preset = 0
@@ -601,7 +319,6 @@ offset_left = 38.0
 offset_top = 72.0
 offset_right = 78.0
 offset_bottom = 112.0
-metadata/_edit_use_anchors_ = true
 
 [node name="food" type="TextureRect" parent="CanvasLayer/ColorRect/food_parent"]
 modulate = Color(1, 1, 1, 0.2)
@@ -609,7 +326,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("8_i5qe8")
-metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect"]
 layout_mode = 0
@@ -617,7 +333,6 @@ offset_left = 464.0
 offset_top = 113.0
 offset_right = 593.0
 offset_bottom = 116.0
-metadata/_edit_use_anchors_ = true
 
 [node name="time_anim" type="AnimationPlayer" parent="CanvasLayer/ColorRect"]
 root_node = NodePath("../Time")
@@ -664,12 +379,12 @@ size_flags_horizontal = 4
 color = Color(0, 0, 0, 1)
 
 [node name="text" type="Label" parent="CanvasLayer/message_panel/message_border/message_canvas"]
+auto_translate_mode = 2
 layout_mode = 0
 offset_left = 11.0
 offset_top = 6.0
 offset_right = 599.0
 offset_bottom = 165.0
-auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_7g5vk")
@@ -679,9 +394,9 @@ autowrap_mode = 2
 
 [node name="Control" type="Control" parent="CanvasLayer/message_panel/message_border/message_canvas"]
 anchors_preset = 0
-offset_left = 575.0
+offset_left = 564.0
 offset_top = 124.0
-offset_right = 615.0
+offset_right = 604.0
 offset_bottom = 164.0
 
 [node name="action_image" type="TextureRect" parent="CanvasLayer/message_panel/message_border/message_canvas/Control"]
@@ -697,6 +412,96 @@ libraries = {
 "": SubResource("AnimationLibrary_y8ta8")
 }
 autoplay = "idle"
+
+[node name="record_message_border" type="ColorRect" parent="CanvasLayer/message_panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -16.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="message_canvas" type="ColorRect" parent="CanvasLayer/message_panel/record_message_border"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = -15.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="text" type="Label" parent="CanvasLayer/message_panel/record_message_border/message_canvas"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 599.0
+offset_bottom = 165.0
+localize_numeral_system = false
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_7g5vk")
+theme_override_font_sizes/font_size = 50
+text = "MESSAGE"
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/message_panel/record_message_border/message_canvas"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="LetterButton" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer" instance=ExtResource("15_deckw")]
+layout_mode = 2
+
+[node name="LetterButton2" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer" instance=ExtResource("15_deckw")]
+layout_mode = 2
+
+[node name="LetterButton3" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer" instance=ExtResource("15_deckw")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="send_record" type="Button" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+localize_numeral_system = false
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_7g5vk")
+theme_override_font_sizes/font_size = 50
+text = "SUBMIT_RECORD"
+
+[node name="BlinkComponent2" type="Node" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer/send_record" node_paths=PackedStringArray("target")]
+script = ExtResource("16_f7824")
+target = NodePath("..")
+
+[node name="UISelectedComponent" type="AudioStreamPlayer" parent="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer/send_record"]
+script = ExtResource("17_hgcwo")
 
 [node name="congratulations_message" type="ColorRect" parent="CanvasLayer/message_panel"]
 visible = false
@@ -726,12 +531,12 @@ size_flags_horizontal = 4
 color = Color(0, 0, 0, 1)
 
 [node name="text" type="Label" parent="CanvasLayer/message_panel/congratulations_message/message_canvas"]
+auto_translate_mode = 2
 layout_mode = 0
 offset_left = 11.0
 offset_top = 6.0
 offset_right = 599.0
 offset_bottom = 280.0
-auto_translate = false
 localize_numeral_system = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_7g5vk")
@@ -799,332 +604,35 @@ color_initial_ramp = SubResource("Gradient_m7m3a")
 hue_variation_min = 0.3
 hue_variation_max = 0.3
 
-[node name="SplashScreen" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="Control" type="Control" parent="CanvasLayer/message_panel/congratulations_message"]
+anchors_preset = 0
+offset_left = 578.0
+offset_top = 241.0
+offset_right = 618.0
+offset_bottom = 281.0
 
-[node name="Title2" type="Label" parent="CanvasLayer/SplashScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -212.0
-offset_top = -88.0
-offset_right = 228.0
-offset_bottom = 15.0
-grow_horizontal = 2
-grow_vertical = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(0.768627, 0.760784, 0.0862745, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 100
-text = "DIGGY DOGGO"
-horizontal_alignment = 1
-
-[node name="Title" type="Label" parent="CanvasLayer/SplashScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -16.0
-offset_right = 232.0
-offset_bottom = 61.0
-grow_horizontal = 2
-grow_vertical = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(0.00784314, 0.494118, 0.772549, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "Daylight Dungeon"
-horizontal_alignment = 2
-
-[node name="Title3" type="Label" parent="CanvasLayer/SplashScreen"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -44.0
-offset_bottom = -11.0
-grow_horizontal = 2
-grow_vertical = 0
-localize_numeral_system = false
-theme_override_colors/font_color = Color(0.00784314, 0.494118, 0.772549, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 30
-text = "A game by @RothioTome for #IndieSpainJam23"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer/SplashScreen"]
-self_modulate = Color(0.00784314, 0.494118, 0.772549, 1)
-position = Vector2(252, 192)
-scale = Vector2(7, 7)
-sprite_frames = SubResource("SpriteFrames_emff3")
-autoplay = "default"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/SplashScreen"]
-position = Vector2(329, 264)
-scale = Vector2(7, 7)
-sprite_frames = SubResource("SpriteFrames_q6d3p")
-autoplay = "default"
-speed_scale = 2.0
-
-[node name="Saw" type="Sprite2D" parent="CanvasLayer/SplashScreen"]
-self_modulate = Color(1, 0.4, 0.435294, 1)
-position = Vector2(444, 168)
-scale = Vector2(7, 7)
-texture = ExtResource("16_3deiw")
-script = ExtResource("17_wkdb2")
-rotation_steps = 48
-rotation_duration = 3.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SplashScreen"]
-layout_mode = 0
-offset_left = 240.0
-offset_top = 492.0
-offset_right = 528.0
-offset_bottom = 722.0
-
-[node name="play" type="Button" parent="CanvasLayer/SplashScreen/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_bottom = NodePath("../settings")
-focus_next = NodePath("../settings")
-focus_previous = NodePath("../settings")
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "PLAY_TITLE"
-alignment = 2
-
-[node name="settings" type="Button" parent="CanvasLayer/SplashScreen/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_top = NodePath("../play")
-focus_next = NodePath("../play")
-focus_previous = NodePath("../play")
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "SETTINGS_TITLE"
-alignment = 2
-
-[node name="credits" type="Button" parent="CanvasLayer/SplashScreen/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_top = NodePath("../play")
-focus_next = NodePath("../play")
-focus_previous = NodePath("../play")
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "CREDITS_TITLE"
-alignment = 2
-
-[node name="SettingsMenu" type="ColorRect" parent="CanvasLayer"]
+[node name="action_image" type="TextureRect" parent="CanvasLayer/message_panel/congratulations_message/Control"]
 visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-script = ExtResource("14_64n3d")
+modulate = Color(0.768627, 0.760784, 0.0862745, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("13_1y4k6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SettingsMenu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -272.0
-offset_top = -356.0
-offset_right = 256.0
-offset_bottom = 368.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(-48, -44)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/message_panel/congratulations_message/Control"]
+libraries = {
+"": SubResource("AnimationLibrary_y8ta8")
+}
+autoplay = "idle"
 
-[node name="Title" type="Label" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "SETTINGS_TITLE"
-horizontal_alignment = 1
-
-[node name="Language" type="Label" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "LANGUAGE_TITLE"
-
-[node name="Languages" type="BoxContainer" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_tmb5l")
-
-[node name="Spanish" type="Button" parent="CanvasLayer/SettingsMenu/VBoxContainer/Languages"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_right = NodePath("../English")
-focus_next = NodePath("../English")
-mouse_default_cursor_shape = 2
-theme = SubResource("Theme_oiutu")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "SPANISH_KEY"
-
-[node name="English" type="Button" parent="CanvasLayer/SettingsMenu/VBoxContainer/Languages"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_left = NodePath("../Spanish")
-focus_neighbor_bottom = NodePath("../../MusicSlider")
-focus_next = NodePath("../../MusicSlider")
-focus_previous = NodePath("../Spanish")
-mouse_default_cursor_shape = 2
-theme = SubResource("Theme_oiutu")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "ENGLISH_KEY"
-
-[node name="music_key" type="Label" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "MUSIC_KEY"
-
-[node name="MusicSlider" type="HSlider" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-modulate = Color(0.00784314, 0.494118, 0.772549, 1)
-layout_mode = 2
-focus_neighbor_top = NodePath("../Languages/English")
-focus_next = NodePath("../SFXSlider")
-focus_previous = NodePath("../Languages/English")
-mouse_default_cursor_shape = 2
-theme_override_icons/grabber = ExtResource("19_8xsk3")
-theme_override_icons/grabber_highlight = ExtResource("19_8xsk3")
-theme_override_icons/grabber_disabled = ExtResource("19_8xsk3")
-max_value = 10.0
-rounded = true
-
-[node name="sfx_key" type="Label" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "FX_KEY"
-
-[node name="SFXSlider" type="HSlider" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-modulate = Color(0.00784314, 0.494118, 0.772549, 1)
-layout_mode = 2
-focus_neighbor_top = NodePath("../MusicSlider")
-focus_next = NodePath("../_RothioTome")
-focus_previous = NodePath("../MusicSlider")
-mouse_default_cursor_shape = 2
-theme_override_icons/grabber = ExtResource("19_8xsk3")
-theme_override_icons/grabber_highlight = ExtResource("19_8xsk3")
-theme_override_icons/grabber_disabled = ExtResource("19_8xsk3")
-max_value = 10.0
-rounded = true
-
-[node name="CREDITS" type="Label" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-localize_numeral_system = false
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "CREDITS"
-autowrap_mode = 3
-
-[node name="_RothioTome" type="LinkButton" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-modulate = Color(1, 0.4, 0.435294, 1)
-layout_mode = 2
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_top = NodePath("../SFXSlider")
-focus_next = NodePath("../BackButton")
-focus_previous = NodePath("../SFXSlider")
-focus_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "CONTACT"
-uri = "https://linktr.ee/rothiotome"
-
-[node name="BackButton" type="Button" parent="CanvasLayer/SettingsMenu/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-localize_numeral_system = false
-focus_neighbor_top = NodePath("../_RothioTome")
-focus_previous = NodePath("../_RothioTome")
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_7g5vk")
-theme_override_font_sizes/font_size = 50
-text = "BACK_KEY"
-
-[node name="shader" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_y0w7u")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_lock_ = true
+[node name="shader" parent="CanvasLayer" instance=ExtResource("14_8leg2")]
 
 [node name="DaylightTimer" type="Timer" parent="."]
 
 [node name="MusicManager" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
 bus = &"Music"
-script = ExtResource("15_652dt")
 
-[node name="fader" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_3lwfk")
-}
-autoplay = "fade_in"
-
-[connection signal="pressed" from="CanvasLayer/SplashScreen/VBoxContainer/play" to="CanvasLayer" method="_on_play_pressed"]
-[connection signal="pressed" from="CanvasLayer/SplashScreen/VBoxContainer/settings" to="CanvasLayer" method="_on_settings_pressed"]
-[connection signal="pressed" from="CanvasLayer/SplashScreen/VBoxContainer/credits" to="CanvasLayer" method="_on_settings_pressed"]
-[connection signal="visibility_changed" from="CanvasLayer/SettingsMenu" to="CanvasLayer/SettingsMenu" method="_on_visibility_changed"]
-[connection signal="pressed" from="CanvasLayer/SettingsMenu/VBoxContainer/Languages/Spanish" to="CanvasLayer/SettingsMenu" method="_on_spanish_pressed"]
-[connection signal="pressed" from="CanvasLayer/SettingsMenu/VBoxContainer/Languages/English" to="CanvasLayer/SettingsMenu" method="_on_english_pressed"]
-[connection signal="value_changed" from="CanvasLayer/SettingsMenu/VBoxContainer/MusicSlider" to="CanvasLayer/SettingsMenu" method="_on_music_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/SettingsMenu/VBoxContainer/SFXSlider" to="CanvasLayer/SettingsMenu" method="_on_sfx_slider_value_changed"]
-[connection signal="pressed" from="CanvasLayer/SettingsMenu/VBoxContainer/BackButton" to="CanvasLayer/SettingsMenu" method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer/send_record" to="." method="_on_send_record_pressed"]
+[connection signal="pressed" from="CanvasLayer/message_panel/record_message_border/message_canvas/MarginContainer/HBoxContainer/send_record" to="CanvasLayer/message_panel" method="_on_send_record_pressed"]
 [connection signal="timeout" from="DaylightTimer" to="." method="_on_daylight_timer_timeout"]

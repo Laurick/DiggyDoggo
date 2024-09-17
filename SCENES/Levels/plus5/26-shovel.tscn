@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://chqdn4qknxmgv"]
+
+[ext_resource type="PackedScene" uid="uid://deuvww0kfufr" path="res://SCENES/base_room10.tscn" id="1_wy0b7"]
+[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://SCENES/PICKABLES/pickable_shovel.tscn" id="2_wjoou"]
+[ext_resource type="PackedScene" uid="uid://cvggfb6j7mwyw" path="res://SCENES/OBSTACLES/skull1.tscn" id="3_bugsf"]
+[ext_resource type="PackedScene" uid="uid://dqfwm86egab0c" path="res://SCENES/OBSTACLES/skull2.tscn" id="4_vk38x"]
+[ext_resource type="PackedScene" uid="uid://cw6gvef1rhq6k" path="res://SCENES/ENEMIES/puddle.tscn" id="5_2n8iq"]
+[ext_resource type="PackedScene" uid="uid://bgw1nycar3ix2" path="res://SCENES/ENEMIES/infinite_trap.tscn" id="6_kwtvy"]
+
+[node name="HomeRoom" instance=ExtResource("1_wy0b7")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(72, 72)
+
+[node name="pickable_shovel" parent="." index="8" instance=ExtResource("2_wjoou")]
+position = Vector2(104, 88)
+
+[node name="tree" parent="." index="9" instance=ExtResource("3_bugsf")]
+position = Vector2(40, 40)
+
+[node name="tree2" parent="." index="10" instance=ExtResource("3_bugsf")]
+position = Vector2(40, 64)
+
+[node name="tree3" parent="." index="11" instance=ExtResource("3_bugsf")]
+position = Vector2(32, 96)
+
+[node name="tree4" parent="." index="12" instance=ExtResource("4_vk38x")]
+position = Vector2(40, 128)
+
+[node name="tree5" parent="." index="13" instance=ExtResource("3_bugsf")]
+position = Vector2(72, 120)
+
+[node name="tree6" parent="." index="14" instance=ExtResource("4_vk38x")]
+position = Vector2(72, 96)
+
+[node name="tree7" parent="." index="15" instance=ExtResource("4_vk38x")]
+position = Vector2(72, 40)
+
+[node name="tree8" parent="." index="16" instance=ExtResource("3_bugsf")]
+position = Vector2(104, 40)
+
+[node name="tree9" parent="." index="17" instance=ExtResource("3_bugsf")]
+position = Vector2(104, 72)
+
+[node name="tree10" parent="." index="18" instance=ExtResource("3_bugsf")]
+position = Vector2(104, 128)
+
+[node name="tree11" parent="." index="19" instance=ExtResource("4_vk38x")]
+position = Vector2(104, 104)
+
+[node name="tree12" parent="." index="20" instance=ExtResource("4_vk38x")]
+position = Vector2(128, 56)
+
+[node name="tree13" parent="." index="21" instance=ExtResource("3_bugsf")]
+position = Vector2(128, 88)
+
+[node name="Spikes" parent="." index="22" instance=ExtResource("5_2n8iq")]
+position = Vector2(48, 96)
+
+[node name="Spikes2" parent="." index="23" instance=ExtResource("5_2n8iq")]
+position = Vector2(96, 56)
+
+[node name="Spikes3" parent="." index="24" instance=ExtResource("6_kwtvy")]
+position = Vector2(72, 88)
+
+[node name="Spikes4" parent="." index="25" instance=ExtResource("6_kwtvy")]
+position = Vector2(120, 120)
+
+[node name="Spikes5" parent="." index="26" instance=ExtResource("6_kwtvy")]
+position = Vector2(56, 128)
+
+[node name="Spikes6" parent="." index="27" instance=ExtResource("6_kwtvy")]
+position = Vector2(120, 24)

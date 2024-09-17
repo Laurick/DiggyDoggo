@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://eu16j0gd1cl7"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_78wys"]
+[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://SCENES/PICKABLES/pickable_shovel.tscn" id="2_wuirw"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="3_oqtog"]
+[ext_resource type="PackedScene" uid="uid://dw7p43bbdrxtn" path="res://SCENES/ENEMIES/tiny-circular-saw.tscn" id="4_654o5"]
+
+[node name="HomeRoom" instance=ExtResource("1_78wys")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(32, 128)
+
+[node name="pickable_shovel" parent="." index="8" instance=ExtResource("2_wuirw")]
+position = Vector2(128, 32)
+
+[node name="Obstacle" parent="." index="9" instance=ExtResource("3_oqtog")]
+position = Vector2(24, 56)
+
+[node name="Obstacle2" parent="." index="10" instance=ExtResource("3_oqtog")]
+position = Vector2(40, 56)
+
+[node name="Obstacle3" parent="." index="11" instance=ExtResource("3_oqtog")]
+position = Vector2(56, 56)
+
+[node name="Obstacle4" parent="." index="12" instance=ExtResource("3_oqtog")]
+position = Vector2(56, 40)
+
+[node name="Obstacle5" parent="." index="13" instance=ExtResource("3_oqtog")]
+position = Vector2(104, 24)
+
+[node name="Obstacle6" parent="." index="14" instance=ExtResource("3_oqtog")]
+position = Vector2(104, 56)
+
+[node name="Obstacle7" parent="." index="15" instance=ExtResource("3_oqtog")]
+position = Vector2(120, 56)
+
+[node name="Obstacle8" parent="." index="16" instance=ExtResource("3_oqtog")]
+position = Vector2(136, 56)
+
+[node name="Obstacle9" parent="." index="17" instance=ExtResource("3_oqtog")]
+position = Vector2(136, 104)
+
+[node name="Obstacle10" parent="." index="18" instance=ExtResource("3_oqtog")]
+position = Vector2(104, 120)
+
+[node name="Obstacle12" parent="." index="19" instance=ExtResource("3_oqtog")]
+position = Vector2(104, 136)
+
+[node name="Obstacle13" parent="." index="20" instance=ExtResource("3_oqtog")]
+position = Vector2(56, 136)
+
+[node name="Obstacle14" parent="." index="21" instance=ExtResource("3_oqtog")]
+position = Vector2(56, 104)
+
+[node name="Obstacle15" parent="." index="22" instance=ExtResource("3_oqtog")]
+position = Vector2(40, 104)
+
+[node name="Obstacle16" parent="." index="23" instance=ExtResource("3_oqtog")]
+position = Vector2(24, 104)
+
+[node name="Obstacle11" parent="." index="24" instance=ExtResource("3_oqtog")]
+position = Vector2(104, 104)
+
+[node name="Saw" parent="." index="25" instance=ExtResource("4_654o5")]
+position = Vector2(40, 32)

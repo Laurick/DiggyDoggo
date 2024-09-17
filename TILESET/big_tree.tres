@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://gcbfi7tngdbm"]
+
+[ext_resource type="Texture2D" uid="uid://dlwbyxv5a0lhc" path="res://TILESET/monochrome_tilemap_transparent_packed.png" id="1_kjpd4"]
+
+[resource]
+atlas = ExtResource("1_kjpd4")
+region = Rect2(224, 32, 16, 16)

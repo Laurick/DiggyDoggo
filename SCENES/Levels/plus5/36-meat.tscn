@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://he58wdxfd7fc"]
+
+[ext_resource type="PackedScene" uid="uid://deuvww0kfufr" path="res://SCENES/base_room10.tscn" id="1_vu31m"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_vfrlh"]
+[ext_resource type="PackedScene" uid="uid://bgw1nycar3ix2" path="res://SCENES/ENEMIES/infinite_trap.tscn" id="3_thk7c"]
+[ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://SCENES/ENEMIES/saw.tscn" id="4_ofqlx"]
+
+[sub_resource type="Curve2D" id="Curve2D_m166e"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 16, 0, 0, 0, 0, 0, -32, 16, 0, 0, 0, 0, -80, 0, 0, 0, 0, 0, 16, 96, 0, 0, 0, 0, -32, 80, 0, 0, 0, 0, -80, 96, 0, 0, 0, 0, 16, 0)
+}
+point_count = 7
+
+[node name="HomeRoom" instance=ExtResource("1_vu31m")]
+
+[node name="pickable_food" parent="." index="8" instance=ExtResource("2_vfrlh")]
+position = Vector2(136, 136)
+
+[node name="Spikes" parent="." index="9" instance=ExtResource("3_thk7c")]
+position = Vector2(72, 56)
+
+[node name="Spikes2" parent="." index="10" instance=ExtResource("3_thk7c")]
+position = Vector2(88, 56)
+
+[node name="Spikes3" parent="." index="11" instance=ExtResource("3_thk7c")]
+position = Vector2(104, 72)
+
+[node name="Spikes4" parent="." index="12" instance=ExtResource("3_thk7c")]
+position = Vector2(104, 88)
+
+[node name="Spikes5" parent="." index="13" instance=ExtResource("3_thk7c")]
+position = Vector2(88, 104)
+
+[node name="Spikes6" parent="." index="14" instance=ExtResource("3_thk7c")]
+position = Vector2(72, 104)
+
+[node name="Spikes7" parent="." index="15" instance=ExtResource("3_thk7c")]
+position = Vector2(56, 88)
+
+[node name="Spikes8" parent="." index="16" instance=ExtResource("3_thk7c")]
+position = Vector2(56, 72)
+
+[node name="Saw" parent="." index="17" instance=ExtResource("4_ofqlx")]
+position = Vector2(112, 32)
+movement_speed = 0.1
+rotation_speed = 200.0
+
+[node name="Path2D" parent="Saw" index="0"]
+curve = SubResource("Curve2D_m166e")
+
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(16, 0)
+
+[editable path="Saw"]

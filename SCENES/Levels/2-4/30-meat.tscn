@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://clfkl5qt7v3y4"]
+
+[ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_c058a"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_pimc1"]
+[ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="3_oteyw"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="4_0e7sl"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="5_72030"]
+[ext_resource type="PackedScene" uid="uid://dql7kqrf20e71" path="res://SCENES/OBSTACLES/big_tree.tscn" id="5_vtcwg"]
+
+[sub_resource type="Curve2D" id="Curve2D_8etuf"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 39.9999, 56.0001, 0, 0, 0, 0, 87.9999, 56.0002, 0, 0, 0, 0, 88, 8.00023, 0, 0, 0, 0, 40, 8.0001, 0, 0, 0, 0, 39.9999, 56.0001)
+}
+point_count = 5
+
+[node name="HomeRoom" instance=ExtResource("1_c058a")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(56, 88)
+
+[node name="pickable_food" parent="." index="8" instance=ExtResource("2_pimc1")]
+position = Vector2(104, 56)
+
+[node name="tree" parent="." index="9" instance=ExtResource("3_oteyw")]
+position = Vector2(40, 104)
+
+[node name="tree2" parent="." index="10" instance=ExtResource("3_oteyw")]
+position = Vector2(40, 40)
+
+[node name="tree3" parent="." index="11" instance=ExtResource("3_oteyw")]
+position = Vector2(40, 56)
+
+[node name="tree4" parent="." index="12" instance=ExtResource("3_oteyw")]
+position = Vector2(56, 120)
+
+[node name="tree5" parent="." index="13" instance=ExtResource("3_oteyw")]
+position = Vector2(104, 40)
+
+[node name="tree6" parent="." index="14" instance=ExtResource("3_oteyw")]
+position = Vector2(40, 80)
+
+[node name="tree7" parent="." index="15" instance=ExtResource("3_oteyw")]
+position = Vector2(120, 40)
+
+[node name="tree9" parent="." index="16" instance=ExtResource("3_oteyw")]
+position = Vector2(120, 56)
+
+[node name="tree10" parent="." index="17" instance=ExtResource("3_oteyw")]
+position = Vector2(120, 72)
+
+[node name="tree8" parent="." index="18" instance=ExtResource("3_oteyw")]
+position = Vector2(120, 112)
+
+[node name="Obstacle" parent="." index="19" instance=ExtResource("4_0e7sl")]
+position = Vector2(120, 96)
+
+[node name="tree11" parent="." index="20" instance=ExtResource("5_vtcwg")]
+position = Vector2(104, 112)
+
+[node name="tree12" parent="." index="21" instance=ExtResource("5_vtcwg")]
+position = Vector2(56, 32)
+
+[node name="Saw2" parent="." index="22" instance=ExtResource("5_72030")]
+position = Vector2(136, 112)
+rotation = 3.14159
+movement_speed = 0.3
+
+[node name="Path2D" parent="Saw2" index="0"]
+position = Vector2(-8, -2.02815e-05)
+curve = SubResource("Curve2D_8etuf")
+
+[node name="PathFollow2D" parent="Saw2/Path2D" index="0"]
+position = Vector2(39.9999, 56.0001)
+
+[editable path="Saw2"]

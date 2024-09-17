@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfmfgqbu5jhu1"]
+
+[ext_resource type="PackedScene" uid="uid://bkix8aaefcba1" path="res://SCENES/base_room.tscn" id="1_auel5"]
+[ext_resource type="PackedScene" uid="uid://cdipbdxiah3gs" path="res://SCENES/PICKABLES/pickable_diamond.tscn" id="2_vd1h4"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="3_7ey06"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="4_eg11q"]
+
+[node name="HomeRoom" instance=ExtResource("1_auel5")]
+
+[node name="OpenDoorButton" parent="." index="7"]
+position = Vector2(120, 40)
+
+[node name="pickable_diamond" parent="." index="8" instance=ExtResource("2_vd1h4")]
+position = Vector2(40, 120)
+
+[node name="Saw" parent="." index="9" instance=ExtResource("3_7ey06")]
+position = Vector2(80, 32)
+
+[node name="Obstacle" parent="." index="10" instance=ExtResource("4_eg11q")]
+position = Vector2(24, 24)
+
+[node name="Obstacle2" parent="." index="11" instance=ExtResource("4_eg11q")]
+position = Vector2(24, 136)
+
+[node name="Obstacle3" parent="." index="12" instance=ExtResource("4_eg11q")]
+position = Vector2(136, 136)
+
+[node name="Obstacle4" parent="." index="13" instance=ExtResource("4_eg11q")]
+position = Vector2(136, 24)

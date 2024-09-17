@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b12yftnvk37xh"
-path="res://.godot/imported/HEROS1bit_Princess Attack U.png-dd7ab2ebd932603ccb18c95bb4c2a037.ctex"
+path="res://.godot/imported/HEROS1bit_Princess Attack U.png-79adf7e9675240d308584cc0502ef4ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/OtherCharacters/spritesheets/HEROS1bit_Princess Attack U.png"
-dest_files=["res://.godot/imported/HEROS1bit_Princess Attack U.png-dd7ab2ebd932603ccb18c95bb4c2a037.ctex"]
+source_file="res://SPRITES/OtherCharacters/spritesheets/HEROS1bit_Princess Attack U.png"
+dest_files=["res://.godot/imported/HEROS1bit_Princess Attack U.png-79adf7e9675240d308584cc0502ef4ae.ctex"]
 
 [params]
 
