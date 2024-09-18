@@ -53,6 +53,7 @@ func on_button_pushed():
 func _on_area_2d_body_entered(body):
 	if(body.name == "Player"):
 		get_node("/root/World/Camera2D").move(self.global_position)
+		body.stop_movement_a_little()
 
 func open_if_enabled(target_door):
 	if(target_door.current_door_state != Door.door_state.DISABLED): 

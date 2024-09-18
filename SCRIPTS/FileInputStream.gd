@@ -7,7 +7,7 @@ func open_file_to_write(file_name:String):
 	file = FileAccess.open("user://"+file_name+".txt", FileAccess.WRITE)
 
 func open_file_to_read(file_name:String):
-	file = FileAccess.open("user://"+file_name+".txt", FileAccess.READ)
+	file = FileAccess.open(file_name, FileAccess.READ)
 
 func read() -> Variant:
 	var line = file.get_line()

@@ -27,7 +27,7 @@ var file:FileInputStream
 func _ready() -> void:
 	file = FileInputStream.new()
 	#file.open_file_to_write("input")
-	file.open_file_to_read("input")
+	file.open_file_to_read("res://Demos/input.txt")
 
 func _physics_process(_delta):
 	if is_dead: return
@@ -46,9 +46,12 @@ func _physics_process(_delta):
 
 func get_input(input_direction:Vector2):
 	velocity = input_direction * velocity_multiplier
-	
 	if Input.is_action_just_pressed("ui_accept"): try_to_action()
 
+
+func stop_movement_a_little():
+	can_move = false
+	get_tree().create_timer(0.3).timeout.connect(func(): can_move = true)
 
 func walk():
 	if velocity != Vector2.ZERO: 
