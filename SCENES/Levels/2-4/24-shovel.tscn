@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://7qsbbb5suub7"]
 
 [ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_gxr7b"]
-[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://SCENES/PICKABLES/pickable_shovel.tscn" id="2_svayu"]
+[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://Nodes/Pickables/pickable_shovel.tscn" id="2_svayu"]
 [ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="3_af4sm"]
-[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="4_c84t1"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://Nodes/Obstacles/obstacle.tscn" id="4_c84t1"]
 [ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://SCENES/ENEMIES/saw.tscn" id="5_g523e"]
 
 [sub_resource type="Curve2D" id="Curve2D_y02n2"]

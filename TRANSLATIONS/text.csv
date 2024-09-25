@@ -23,10 +23,10 @@ HIGHSCORE_ARCADE_TITLE,HHIGHSCORES\nARCADE MODE,PUNTUACIONES\nMODO ARCADE
 HIGHSCORE_TIME_TITLE,HHIGHSCORES\nTIME MODE,PUNTUACIONES\nMODO CONTRARELOJ
 PLAY_TIME_TITLE,TIME-ATTACK,CONTRARELOJ
 PLAY_ARCADE_TITLE, ARCADE , ARCADE 
-PLAY_TIME_MESSAGE,Time-attack mode. collect 4 shovels and escape,Modo contrareloj. Consigue 4 palas y escapa.
+PLAY_TIME_MESSAGE,Time-attack mode. collect 5 shovels and escape,Modo contrareloj. Consigue 5 palas y escapa.
 PLAY_ARCADE_MESSAGE,Arcade mode. Go depeer and collect treasures for points.,Modo arcade. Ve abajo y recoje tesoros por puntos.
 INSERT_COIN,PRESS START TO START,PULSA START PARA COMENZAR
-RECORD_ARCADE,Wow a new record! -> %d,¡Ole un nuevo record! -> %d
-RECORD_TIME,Wow a new record! -> %d,¡Ole un nuevo record! -> %d
+RECORD_ARCADE,Wow a new record! %d,¡Ole un nuevo record! %d
+RECORD_TIME,Wow a new record! %d,¡Ole un nuevo record! %d
 SUBMIT_RECORD,SUBMIT,AÑADIR
 RESET_HIGHSCORES_KEY,RESET HIGHSCORES,RESETEAR PUNTUACIONES

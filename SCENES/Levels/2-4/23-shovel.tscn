@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://eu16j0gd1cl7"]
 
 [ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_78wys"]
-[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://SCENES/PICKABLES/pickable_shovel.tscn" id="2_wuirw"]
-[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="3_oqtog"]
-[ext_resource type="PackedScene" uid="uid://dw7p43bbdrxtn" path="res://SCENES/ENEMIES/tiny-circular-saw.tscn" id="4_654o5"]
+[ext_resource type="PackedScene" uid="uid://b4bum68lvuxam" path="res://Nodes/Pickables/pickable_shovel.tscn" id="2_wuirw"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://Nodes/Obstacles/obstacle.tscn" id="3_oqtog"]
+[ext_resource type="PackedScene" uid="uid://dw7p43bbdrxtn" path="res://Nodes/Enemies/tiny-circular-saw.tscn" id="4_654o5"]
 
 [node name="HomeRoom" instance=ExtResource("1_78wys")]
 

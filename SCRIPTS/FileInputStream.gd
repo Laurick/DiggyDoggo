@@ -4,7 +4,7 @@ extends Node
 var file:FileAccess
 
 func open_file_to_write(file_name:String):
-	file = FileAccess.open("user://"+file_name+".txt", FileAccess.WRITE)
+	pass
 
 func open_file_to_read(file_name:String):
 	file = FileAccess.open(file_name, FileAccess.READ)
@@ -17,4 +17,5 @@ func write(message):
 	file.store_string(var_to_str(message)+"\n")
 
 func close_file():
-	file.close()
+	if file:
+		file.close()

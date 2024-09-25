@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://clfkl5qt7v3y4"]
 
 [ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_c058a"]
-[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_pimc1"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://Nodes/Pickables/pickable_food.tscn" id="2_pimc1"]
 [ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="3_oteyw"]
-[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://SCENES/OBSTACLES/obstacle.tscn" id="4_0e7sl"]
-[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="5_72030"]
+[ext_resource type="PackedScene" uid="uid://bjjuwthc5t8g0" path="res://Nodes/Obstacles/obstacle.tscn" id="4_0e7sl"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://Nodes/Enemies/tiny-saw.tscn" id="5_72030"]
 [ext_resource type="PackedScene" uid="uid://dql7kqrf20e71" path="res://SCENES/OBSTACLES/big_tree.tscn" id="5_vtcwg"]
 
 [sub_resource type="Curve2D" id="Curve2D_8etuf"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://diuxsn5kcpp50"]
 
 [ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_pbffs"]
-[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_c2gax"]
-[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="5_n6wr1"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://Nodes/Pickables/pickable_food.tscn" id="2_c2gax"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://Nodes/Enemies/tiny-saw.tscn" id="5_n6wr1"]
 
 [sub_resource type="Curve2D" id="Curve2D_8etuf"]
 resource_local_to_scene = true

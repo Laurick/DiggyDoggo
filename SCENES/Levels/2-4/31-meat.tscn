@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://dnxkpxj6iu2yy"]
 
 [ext_resource type="PackedScene" uid="uid://dcwnilgbbtdwx" path="res://SCENES/base_room2-5.tscn" id="1_nfijk"]
-[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://SCENES/PICKABLES/pickable_food.tscn" id="2_d01sg"]
+[ext_resource type="PackedScene" uid="uid://c8e1mjivc4yph" path="res://Nodes/Pickables/pickable_food.tscn" id="2_d01sg"]
 [ext_resource type="PackedScene" uid="uid://cv5r5wwjufsy4" path="res://SCENES/ENEMIES/saw.tscn" id="4_dwtvw"]
-[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://SCENES/ENEMIES/tiny-saw.tscn" id="5_kv4pk"]
+[ext_resource type="PackedScene" uid="uid://qo18w5b8ecoc" path="res://Nodes/Enemies/tiny-saw.tscn" id="5_kv4pk"]
 [ext_resource type="PackedScene" uid="uid://e2du2vpnq2i1" path="res://SCENES/OBSTACLES/tree.tscn" id="5_xs1np"]
 
 [sub_resource type="Curve2D" id="Curve2D_mgttd"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 88, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 88)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 75, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 88)
 }
 point_count = 3
 
@@ -34,14 +34,21 @@ position = Vector2(112, -16)
 [node name="Path2D" parent="Saw" index="0"]
 curve = SubResource("Curve2D_mgttd")
 
+[node name="PathFollow2D" parent="Saw/Path2D" index="0"]
+position = Vector2(0, 75)
+
 [node name="Saw2" parent="." index="10" instance=ExtResource("5_kv4pk")]
+modulate = Color(0.00784314, 0.494118, 0.772549, 1)
 position = Vector2(48, -16)
 
 [node name="Path2D" parent="Saw2" index="0"]
 curve = SubResource("Curve2D_mgttd")
 
+[node name="PathFollow2D" parent="Saw2/Path2D" index="0"]
+position = Vector2(0, 75)
+
 [node name="Saw3" parent="." index="11" instance=ExtResource("4_dwtvw")]
-position = Vector2(56, 88)
+position = Vector2(56, 75)
 
 [node name="Path2D" parent="Saw3" index="0"]
 curve = SubResource("Curve2D_at24j")

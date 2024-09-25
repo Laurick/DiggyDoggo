@@ -52,6 +52,7 @@ func show_message_record(message:String, p_key:String):
 func _on_send_record_pressed() -> void:
 	var blink_component:BlinkComponent = $record_message_border/message_canvas/MarginContainer/HBoxContainer/send_record/BlinkComponent2
 	blink_component.blink()
+	AudioManager.play_confirmation()
 	await blink_component.blink_finished
 	message_visible.hide()
 	message_is_visible = false

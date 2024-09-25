@@ -17,7 +17,7 @@ signal on_pick_object
 signal on_hurt
 signal on_action_area_entered
 
-var can_move:bool = true
+var can_move:bool = false
 var is_invulnerable:bool = false
 var is_hurting:bool = false
 
@@ -34,7 +34,7 @@ func _physics_process(_delta):
 	if Globals.game_mode == Globals.GAME_MODE.demo:
 		#var a = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		#file.write(a)
-		#get_input(a)
+		can_move = true
 		var a = file.read()
 		if a != null:
 			get_input(a)

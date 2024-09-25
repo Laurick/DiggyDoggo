@@ -1,6 +1,6 @@
 extends Node
 
-const MAX_SIZE_HOLE:int = 2
+const MAX_SIZE_HOLE:int = 5
 var dungeon = {}
 
 @onready var map_node:Node2D = $MapNode
@@ -35,6 +35,7 @@ func _ready():
 	player.on_pick_object.connect(player_picked_object)
 	player.on_action_area_entered.connect(action_area_entered)
 	canvas_layer.on_message_closed.connect(on_message_closed)
+	get_tree().create_timer(0.5).timeout.connect(func(): player.can_move = false)
 
 func load_map():
 	for i in dungeon.keys():
@@ -47,8 +48,10 @@ func start_day():
 	daylight_timer.wait_time = Globals.daylight_duration
 	daylight_timer.start()
 	if Globals.game_mode != Globals.GAME_MODE.demo:
+		player.pause_movement()
 		show_message("HOME_MESSAGE" if Globals.current_day == 0 else "SHINY_DAY")
-	Globals.current_day += 1
+	else:
+		Globals.current_day += 1
 	
 func player_hurt(damage:int):
 	if(daylight_timer.time_left - damage <= 0): game_over()
@@ -99,7 +102,7 @@ func dig(area:action_zone):
 	if(Globals.hole_size == MAX_SIZE_HOLE):
 		if Globals.game_mode == Globals.GAME_MODE.time:
 			canvas_layer.show_final_message()
-			player.can_move = false
+			player.pause_movement()
 		if Globals.game_mode == Globals.GAME_MODE.arcade:
 			Globals.soft_reset()
 			Globals.level += 1
@@ -117,6 +120,7 @@ func action_area_entered(area:action_zone.zone_type):
 			Globals.dig_message_seen = true
 
 func game_over():
+	$DaylightTimer.stop()
 	if Globals.game_mode == Globals.GAME_MODE.demo:
 		Fader.fade_with(return_to_main)
 		player.kill()
@@ -175,7 +179,12 @@ func _on_daylight_timer_timeout():
 	game_over()
 
 func compute_score()-> int:
-	return Globals.score + ((10000-Globals.current_daylight_duration*10)+Globals.current_day*100)
+	if Globals.game_mode == Globals.GAME_MODE.time:
+		return 10000-Globals.number_of_hits*100-Globals.current_day*10
+	elif Globals.game_mode == Globals.GAME_MODE.arcade:
+		return Globals.score
+	else:
+		return 0
 
 
 var record_sended = false
