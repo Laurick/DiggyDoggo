@@ -41,18 +41,20 @@ func is_highscore(type:Globals.GAME_MODE, score:int) -> bool:
 func add_score(type:Globals.GAME_MODE, score:int, name_player:String):
 	match type:
 		Globals.GAME_MODE.arcade:
-			for item in arcade_scores:
+			for i in range(len(arcade_scores)):
+				var item = arcade_scores[i]
 				if item["score"] < score:
-					item["name"] = name_player
-					item["score"] = score
+					arcade_scores.insert(i,{"name":name_player,"score":score})
 					break
+			arcade_scores = arcade_scores.slice(0,10)
 			save_file(path_arcade, arcade_scores)
 		Globals.GAME_MODE.time:
-			for item in time_scores:
+			for i in range(len(time_scores)):
+				var item = time_scores[i]
 				if item["score"] < score:
-					item["name"] = name_player
-					item["score"] = score
+					time_scores.insert(i,{"name":name_player,"score":score})
 					break
+			time_scores = time_scores.slice(0,10)
 			save_file(path_time, time_scores)
 
 func reset():

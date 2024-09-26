@@ -6,7 +6,7 @@ var hole_size:int = 0
 
 var consumed_room:Array = []
 var inventory:Array[Pickable.ResourceType] = []
-var current_day:int = 0
+var current_day:int = -1
 var score:int = 0
 var level:int = 1
 
@@ -43,7 +43,7 @@ func reset():
 	level = 1
 	number_of_hits = 0
 	hole_size = 0
-	current_day = 0
+	current_day = -1
 	current_daylight_duration = daylight_duration
 	consumed_room = []
 	inventory.clear()

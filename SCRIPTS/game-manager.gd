@@ -49,9 +49,8 @@ func start_day():
 	daylight_timer.start()
 	if Globals.game_mode != Globals.GAME_MODE.demo:
 		player.pause_movement()
-		show_message("HOME_MESSAGE" if Globals.current_day == 0 else "SHINY_DAY")
-	else:
 		Globals.current_day += 1
+		show_message("HOME_MESSAGE" if Globals.current_day == 0 else "SHINY_DAY")
 	
 func player_hurt(damage:int):
 	if(daylight_timer.time_left - damage <= 0): game_over()
