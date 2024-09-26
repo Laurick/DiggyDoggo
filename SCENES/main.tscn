@@ -243,7 +243,7 @@ tracks/9/path = NodePath("Sprite2D:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 1.83333),
+"times": PackedFloat32Array(0, 1.8667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -664,6 +664,7 @@ target = NodePath("..")
 script = ExtResource("7_wyv3n")
 
 [node name="play_arcade2" type="Button" parent="SplashScreen/Control/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 localize_numeral_system = false

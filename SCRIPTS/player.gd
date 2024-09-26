@@ -26,7 +26,6 @@ var file:FileInputStream
 
 func _ready() -> void:
 	file = FileInputStream.new()
-	#file.open_file_to_write("input")
 	file.open_file_to_read("res://Demos/input.txt")
 
 func _physics_process(_delta):
@@ -131,7 +130,6 @@ func try_to_action():
 
 
 func kill():
-	file.close_file()
 	is_dead = true
 	is_invulnerable = true
 	anim.play("death_D")

@@ -12,6 +12,7 @@ extends Control
 @onready var blink_time_component:BlinkComponent = $SplashScreen/Control/VBoxContainer/play_time/BlinkComponent2
 @onready var animation_player: AnimationPlayer = $SplashScreen/AnimationPlayer
 
+const TIME_HIGHSCORES = 10
 
 enum MainMenuStates {INTRO, IDLE, HIGHSCORES_TIME, HIGHSCORES_ARCADE, DEMO, OPTIONS, START} 
 var state:MainMenuStates = MainMenuStates.INTRO
@@ -51,7 +52,7 @@ func start_game():
 	time_choose_label.start()
 
 
-func restart_timer(time:int = 20):
+func restart_timer(time:int = 3):
 	interaction_timer.paused = true
 	interaction_timer.wait_time = time
 	interaction_timer.start()
@@ -62,12 +63,14 @@ func _on_interaction_timer_timeout() -> void:
 	state = (state + 1) as MainMenuStates
 	match state:
 		MainMenuStates.HIGHSCORES_TIME:
-			restart_timer(10)
+			restart_timer(TIME_HIGHSCORES)
 			Fader.fade_with(see_highscore_time)
 		MainMenuStates.HIGHSCORES_ARCADE:
-			restart_timer(10)
+			restart_timer(TIME_HIGHSCORES)
 			Fader.fade_with(see_highscore_arcade)
 		MainMenuStates.DEMO:
+			#restart_timer()
+			#Fader.fade_with(_exit_to_main)
 			Fader.fade_with(go_to_demo)
 
 

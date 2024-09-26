@@ -122,8 +122,9 @@ func action_area_entered(area:action_zone.zone_type):
 func game_over():
 	$DaylightTimer.stop()
 	if Globals.game_mode == Globals.GAME_MODE.demo:
-		Fader.fade_with(return_to_main)
 		player.kill()
+		await get_tree().create_timer(0.3).timeout
+		Fader.fade_with(return_to_main)
 	else:
 		show_message("DIE_MESSAGE")
 		player.kill()

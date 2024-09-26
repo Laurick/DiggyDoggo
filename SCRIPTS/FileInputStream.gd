@@ -1,5 +1,4 @@
 class_name FileInputStream
-extends Node
 
 var file:FileAccess
 
@@ -15,7 +14,3 @@ func read() -> Variant:
 
 func write(message):
 	file.store_string(var_to_str(message)+"\n")
-
-func close_file():
-	if file:
-		file.close()
