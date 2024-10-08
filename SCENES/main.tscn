@@ -531,8 +531,8 @@ offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 0
 localize_numeral_system = false
-text = "A game by @RothioTome for #IndieSpainJam23
-and modded for GodotCon 2024"
+text = "A game by @RothioTome winner of the
+#IndieSpainJam23 and modded for GodotCon 2024"
 label_settings = ExtResource("3_o2uax")
 horizontal_alignment = 1
 vertical_alignment = 2
